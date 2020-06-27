@@ -48,7 +48,6 @@ export default ({ titlePre = '' }) => {
           ))}
         </ul>
       </div>
-      <hr />
     </header>
   )
 }
