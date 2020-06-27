@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'hanko-font';
-  src: url('../fonts/HANKO___.TTF');
+  src: url('../../assets/fonts/HANKO___.TTF');
 }
 
 @font-face {
   font-family: 'dinosaur-font';
-  src: url("../fonts/KR Nicky's Dinos.ttf");
+  src: url("../../assets/fonts//KR Nicky's Dinos.ttf");
 }
 
 :root {
