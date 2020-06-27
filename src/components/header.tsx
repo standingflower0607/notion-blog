@@ -30,7 +30,7 @@ export default ({ titlePre = '' }) => {
       </Head>
       <div>
         <div className="icon">
-          <a href="/">Canned Bananas / バナナの缶詰</a>
+          <a href="/">Canned Bananas</a>
         </div>
         <ul>
           {navItems.map(({ label, page, link }) => (

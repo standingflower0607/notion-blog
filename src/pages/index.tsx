@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Head from 'next/head'
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
 import Features from '../components/features'
@@ -14,7 +15,7 @@ export default () => (
       <p>
         夢がないので、平等な機会を作りたいです。それが夢かもしれません。そして、自分がそれで幸せを感じれれば十分ですわ。
       </p>
-      <p className="dinosaur-font">ABCDEFGHJK</p>
+      <h3 className="dinosaur-font">ABCDEFGHJK</h3>
 
       <h4>今の興味</h4>
       <p>テクノロジーの進歩と人間倫理</p>
