@@ -9,8 +9,8 @@ export default () => (
   <>
     <Header titlePre="Me" />
 
-    <h2>Do you want know more about me?</h2>
-    <div>
+    <div className="container">
+      <h1>Do you want know more about me?</h1>
       <div className={sharedStyles.section}>
         <h3 className={sharedStyles.header}>好きなもの</h3>
         <div className={sharedStyles.content}>

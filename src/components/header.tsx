@@ -29,9 +29,9 @@ export default ({ titlePre = '' }) => {
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
       <div>
-        <span className="icon">
+        <div className="icon">
           <a href="/">Canned Bananas / バナナの缶詰</a>
-        </span>
+        </div>
         <ul>
           {navItems.map(({ label, page, link }) => (
             <li key={label}>

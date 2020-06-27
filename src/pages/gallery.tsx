@@ -9,7 +9,7 @@ export default () => (
   <>
     <Header titlePre="Gallery" />
     <div className={sharedStyles.layout}>
-      <h2>Gallery</h2>
+      <h1>Gallery</h1>
     </div>
   </>
 )
