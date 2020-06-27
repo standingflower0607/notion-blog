@@ -5,9 +5,11 @@
   text-align: center;
   letter-spacing: -0.02em;
   background-color: black;
+  color: whitesmoke;
 }
 
 .header ul {
+  float: right;
   list-style: none;
   padding: 0;
 }

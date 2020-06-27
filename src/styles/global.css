@@ -288,6 +288,7 @@ mark {
 }
 
 .icon {
+  margin-left: 1rem;
   float: left;
   color: white;
 }
