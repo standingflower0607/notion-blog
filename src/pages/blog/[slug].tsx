@@ -12,6 +12,7 @@ import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -385,17 +386,21 @@ const RenderPost = ({ post, redirect, preview }) => {
               )
               break
             }
-            case 'tweet': {
-              if (properties.html) {
-                toRender.push(
-                  <div
-                    dangerouslySetInnerHTML={{ __html: properties.html }}
-                    key={id}
-                  />
-                )
+            case 'tweet':
+              const tweetUrl = properties.source[0][0]
+              const pos = tweetUrl.indexOf('?')
+              let tweetId = tweetUrl.substring(0, pos).split('/')[5]
+              if (!tweetId) {
+                tweetId = tweetUrl.split('/')[5]
               }
+              toRender.push(
+                <TwitterTweetEmbed
+                  key={id}
+                  tweetId={tweetId}
+                  options={{ margin: '0 auto;' }}
+                />
+              )
               break
-            }
             default:
               if (
                 process.env.NODE_ENV !== 'production' &&
