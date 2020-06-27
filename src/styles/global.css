@@ -293,6 +293,10 @@ mark {
   color: white;
 }
 
+.container {
+  margin: 0.5rem auto;
+}
+
 .dinosaur-font {
   font-family: dinosaur-font;
 }
