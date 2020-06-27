@@ -8,6 +8,8 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
   { label: 'Blog', page: '/blog' },
   { label: 'Contact', page: '/contact' },
+  { label: 'Gallery', page: '/gallery' },
+  { label: 'Me', page: '/me' },
 ]
 
 const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
@@ -28,7 +30,7 @@ export default ({ titlePre = '' }) => {
       </Head>
       <div>
         <span className="icon">
-          <a href="">Canned Bananas / バナナの缶詰</a>
+          <a href="/">Canned Bananas / バナナの缶詰</a>
         </span>
         <ul>
           {navItems.map(({ label, page, link }) => (
