@@ -47,8 +47,8 @@ export default ({ titlePre = '' }) => {
             </li>
           ))}
         </ul>
-        <hr />
       </div>
+      <hr />
     </header>
   )
 }
