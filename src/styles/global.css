@@ -289,12 +289,12 @@ mark {
 
 .icon {
   margin-left: 1rem;
-  float: left;
-  color: white;
+  font-family: hanko-font;
 }
 
 .container {
   margin: 0.5rem auto;
+  width: 80%;
 }
 
 .dinosaur-font {
