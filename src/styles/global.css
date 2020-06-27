@@ -295,6 +295,7 @@ mark {
 .container {
   margin: 0.5rem auto;
   width: 80%;
+  text-align: center;
 }
 
 .dinosaur-font {

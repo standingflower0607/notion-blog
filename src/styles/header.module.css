@@ -4,7 +4,7 @@
   padding: 0.5em 0;
   text-align: center;
   letter-spacing: -0.02em;
-  border-bottom: black;
+  border-bottom: 1px bold black;
 }
 
 .header ul {
