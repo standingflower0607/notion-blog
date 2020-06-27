@@ -9,8 +9,7 @@ export default () => (
   <>
     <Header titlePre="Home" />
     <div className={sharedStyles.layout}>
-      <h1>🧍🏻‍♀+ 🌸+ 👑 = 🍌</h1>
-      <h1>Canned Bananas</h1>
+      <h1 className="hanko-font">Canned Bananas</h1>
       <h2>Kan Tachibana</h2>
 
       <div className="explanation">

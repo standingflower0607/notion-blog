@@ -3,7 +3,7 @@ import ExtLink from './ext-link'
 export default () => (
   <>
     <footer>
-      ふった〜
+      <p>🧍🏻‍♀+ 🌸+ 👑 = 🍌</p>
     </footer>
   </>
 )
