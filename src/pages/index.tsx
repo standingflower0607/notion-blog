@@ -9,19 +9,12 @@ export default () => (
   <>
     <Header titlePre="Home" />
     <div className={sharedStyles.layout}>
-      <img
-        src="/zeit-and-notion.png"
-        height="85"
-        width="250"
-        alt="Vercel + Notion"
-      />
       <h1>🧍🏻‍♀+ 🌸+ 👑 = 🍌</h1>
       <h1>Canned Bananas</h1>
       <h2>Kan Tachibana</h2>
 
       <div className="explanation">
         <p>高校生やってます。</p>
-
       </div>
     </div>
   </>

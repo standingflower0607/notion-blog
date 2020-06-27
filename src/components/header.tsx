@@ -29,21 +29,27 @@ export default ({ titlePre = '' }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
-      <ul>
-        {navItems.map(({ label, page, link }) => (
-          <li key={label}>
-            {page ? (
-              <Link href={page}>
-                <a className={pathname === page ? 'active' : undefined}>
-                  {label}
-                </a>
-              </Link>
-            ) : (
+      <div>
+        <span className="icon">
+          <a href="">Canned Bananas / バナナの缶詰</a>
+        </span>
+        <ul>
+          {navItems.map(({ label, page, link }) => (
+            <li key={label}>
+              {page ? (
+                <Link href={page}>
+                  <a className={pathname === page ? 'active' : undefined}>
+                    {label}
+                  </a>
+                </Link>
+              ) : (
                 <ExtLink href={link}>{label}</ExtLink>
               )}
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+        <hr />
+      </div>
     </header>
   )
 }
