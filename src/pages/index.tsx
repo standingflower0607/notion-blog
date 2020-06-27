@@ -15,10 +15,12 @@ export default () => (
         width="250"
         alt="Vercel + Notion"
       />
+      <h1>🧍🏻‍♀+ 🌸+ 👑 = 🍌</h1>
       <h1>Canned Bananas</h1>
       <h2>Kan Tachibana</h2>
 
       <div className="explanation">
+        <p>高校生やってます。</p>
 
       </div>
     </div>
