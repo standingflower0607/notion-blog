@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'hanko-font';
+  src: url('../fonts/HANKO___.TTF');
+}
+
+@font-face {
+  font-family: 'dinosaur-font';
+  src: url("../fonts/KR Nicky's Dinos.ttf");
+}
+
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
@@ -275,6 +285,19 @@ mark {
 
 .logo :global(svg) {
   max-width: calc(100vw - var(--gap-double));
+}
+
+.icon {
+  float: left;
+  color: white;
+}
+
+.dinosaur-font {
+  font-family: dinosaur-font;
+}
+
+.hanko-font {
+  font-family: hanko-font;
 }
 
 h1 {
