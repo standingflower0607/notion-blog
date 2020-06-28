@@ -12,14 +12,16 @@ export default () => (
     <div className="container">
       <h1>Do you want know more about me?</h1>
       <div className={sharedStyles.section}>
-        <h3 className={sharedStyles.header}>好きなもの</h3>
+        <h3 className={sharedStyles.header}>Background</h3>
+        <div className={sharedStyles.content}>
+          <p>レペゼン埼玉</p>
+        </div>
+      </div>
+      <div className={sharedStyles.section}>
+        <h3 className={sharedStyles.header}>Favorites</h3>
         <div className={sharedStyles.content}>
           <p>ラジオを聞くのが好きです。</p>
-          <ul>
-            <li>オードリーのオールナイトニッポン</li>
-            <li>Creepy Nutsのオールナイトニッポン</li>
-            <li>ハライチのターン</li>
-          </ul>
+          <p>オードリー, ハライチ, Creepy Nuts</p>
         </div>
       </div>
       <div className={sharedStyles.section}>
