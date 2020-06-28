@@ -5,7 +5,7 @@ import Twitter from '../components/twitter'
 import ExtLink from '../components/ext-link'
 import Features from '../components/features'
 import GitHub from '../components/svgs/github'
-import sharedStyles from '../styles/shared.module.css'
+import sharedStyles from '../styles/twitter.module.css'
 
 const tweets = [
   {
@@ -24,7 +24,7 @@ export default () => (
       <h1>Twitter</h1>
 
       <p>Here is "my Twitter" 🤗, I don't have an account, though.</p>
-      <div className="twitterFeed">
+      <div className={sharedStyles.feed}>
         <p>B : ....</p>
         <p>
           A : Oh, for real? It means it exploit our spare time and sell it to
