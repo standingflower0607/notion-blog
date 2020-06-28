@@ -85,5 +85,4 @@ const photos = [
     height: 3,
   },
 ]
-
 export default photos
