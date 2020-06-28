@@ -13,7 +13,7 @@ import { photos } from './photos'
 
 export default () => (
   <>
-    <Header titlePre="Home" />
+    <Header titlePre="Instagram" />
     <div className="container">
       <h1>Instagram</h1>
       <p>Here is "my Instagram" 😎</p>

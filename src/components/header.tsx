@@ -9,6 +9,8 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Blog', page: '/blog' },
   { label: 'Contact', page: '/contact' },
   { label: 'Gallery', page: '/gallery' },
+  { label: 'Instagram', page: '/instagram' },
+  { label: 'Twitter', page: '/twitter' },
   { label: 'Me', page: '/me' },
 ]
 

@@ -8,7 +8,7 @@ import sharedStyles from '../styles/shared.module.css'
 
 export default () => (
   <>
-    <Header titlePre="Home" />
+    <Header titlePre="Twitter" />
     <div className="container">
       <h1>Instagram</h1>
       <p>Here is "my Twitter" 🤫</p>
