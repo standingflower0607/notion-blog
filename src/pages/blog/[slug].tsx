@@ -156,6 +156,8 @@ const RenderPost = ({ post, redirect, preview }) => {
         {post.Authors.length > 0 && (
           <div className="authors">By: {post.Authors.join(' ')}</div>
         )}
+        {post.Tag && <div>Tags : {post.Tag}</div>}
+        {post.Category && <div>Category : {post.Category}</div>}
         {post.Date && (
           <div className="posted">Posted: {getDateStr(post.Date)}</div>
         )}
