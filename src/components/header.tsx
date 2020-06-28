@@ -8,7 +8,6 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
   { label: 'Blog', page: '/blog' },
   { label: 'Contact', page: '/contact' },
-  { label: 'Gallery', page: '/gallery' },
   { label: 'Instagram', page: '/instagram' },
   { label: 'Twitter', page: '/twitter' },
   { label: 'Me', page: '/me' },
@@ -16,7 +15,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
 
 const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
 
-export default ({ titlePre = '' }) => {
+export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()
 
   return (
@@ -25,10 +24,10 @@ export default ({ titlePre = '' }) => {
         <title>{titlePre ? `${titlePre} |` : ''} Canned Bananas</title>
         <meta name="description" content="Kan Tachibana's Blog" />
         <meta name="og:title" content="Canned Bananas" />
-        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image" content={ogImageReplace || ogImageUrl} />
         <meta name="twitter:site" content="@banakankan" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageReplace || ogImageUrl} />
       </Head>
       <div>
         <div className="icon">
