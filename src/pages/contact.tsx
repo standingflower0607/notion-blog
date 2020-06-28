@@ -29,7 +29,7 @@ export default () => (
       <div className={sharedStyles.layout}>
         <div className={contactStyles.avatar}></div>
 
-        <h1 style={{ marginTop: 0 }}>Contact</h1>
+        <h1>Contact</h1>
 
         <div className={contactStyles.name}>Kan Tachibana</div>
 
