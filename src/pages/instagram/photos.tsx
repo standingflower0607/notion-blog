@@ -1,4 +1,4 @@
-export const photos = [
+const photos = [
   {
     src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599',
     width: 4,
@@ -85,3 +85,5 @@ export const photos = [
     height: 3,
   },
 ]
+
+export default photos
