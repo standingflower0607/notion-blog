@@ -16,7 +16,7 @@ export default () => (
     <Header titlePre="Instagram" />
     <div className="container">
       <h1>Instagram</h1>
-      <p>Here is "my Instagram" 😎, I don't have an acount, though.</p>
+      <p>Here is "my Instagram" 😎, I don't have an account, though.</p>
       <Gallery photos={photos} />
     </div>
   </>

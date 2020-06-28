@@ -10,8 +10,8 @@ export default () => (
   <>
     <Header titlePre="Twitter" />
     <div className="container">
-      <h1>Instagram</h1>
-      <p>Here is "my Twitter" 🤗, I don't have an acount, though.</p>
+      <h1>Twitter</h1>
+      <p>Here is "my Twitter" 🤗, I don't have an account, though.</p>
     </div>
   </>
 )
