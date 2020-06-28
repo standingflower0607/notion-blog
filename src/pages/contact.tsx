@@ -26,9 +26,7 @@ export default () => (
   <>
     <Header titlePre="Contact" />
     <div className={sharedStyles.layout}>
-      <div className={contactStyles.avatar}>
-        <img src="/for_insta.jpg" alt="me" height={60} />
-      </div>
+      <div className={contactStyles.avatar}></div>
 
       <h1 style={{ marginTop: 0 }}>Contact</h1>
 
