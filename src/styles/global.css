@@ -293,6 +293,7 @@ mark {
 }
 
 .container {
+  max-width: calc(600px + 10%);
   margin: 0.5rem auto;
   width: 80%;
   text-align: center;
