@@ -252,3 +252,8 @@
   object-fit: cover;
   box-shadow: none;
 }
+
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
