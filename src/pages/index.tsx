@@ -12,13 +12,11 @@ export default () => (
     <div className="container">
       <h1 className="hanko-font">Canned Bananas</h1>
       <img src="../../public/amekomi.jpg" alt="画像" />
-      <img src="../../public/sejou.png" alt="" />
-      <img src="https://photos.app.goo.gl/gzeQVEc7tevwidvZ7" alt="" />
       <h1>Kan Tachibana / 立花 冠</h1>
       <p>
         夢がないので、平等な機会を作りたいです。それが夢かもしれません。そして、自分がそれで幸せを感じれれば十分ですわ。
       </p>
-      <h1 className="dinosaur-font">ABCDEFGHJK</h1>
+      <h1 className="dinosaur-font">ABCDEFGHJKLMN</h1>
 
       <h4>今の興味</h4>
       <p>テクノロジーの進歩と人間倫理</p>

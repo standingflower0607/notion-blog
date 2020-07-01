@@ -30,7 +30,7 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
         <meta name="twitter:image" content={ogImageReplace || ogImageUrl} />
       </Head>
       <div>
-        <div className="icon">
+        <div className={styles.icon}>
           <a href="/">Canned Bananas</a>
         </div>
         <ul>

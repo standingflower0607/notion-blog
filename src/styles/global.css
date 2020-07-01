@@ -267,6 +267,7 @@ a {
 }
 a:hover {
   color: #3291ff;
+  cursor: pointer;
 }
 
 .links {
@@ -285,11 +286,6 @@ mark {
 
 .logo :global(svg) {
   max-width: calc(100vw - var(--gap-double));
-}
-
-.icon {
-  margin-left: 1rem;
-  font-family: hanko-font;
 }
 
 .container {

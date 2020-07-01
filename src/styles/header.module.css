@@ -29,6 +29,13 @@
   font-weight: 600;
 }
 
+.icon {
+  float: left;
+  margin-left: 1rem;
+  font-family: hanko-font;
+  font-size: 80%;
+}
+
 @media (max-width: 600px) {
   .header {
     padding: 0.5em 0 2em;
