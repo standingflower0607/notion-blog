@@ -38,6 +38,7 @@
   font-family: hanko-font;
   font-size: 1.5rem;
   color: black;
+  background-color: black;
 }
 .border {
   box-sizing: border-box;
