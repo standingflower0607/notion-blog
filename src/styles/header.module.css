@@ -36,10 +36,10 @@
   font-size: 80%;
 }
 .border {
-  height: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  box-sizing: border-box;
+  height: 1px;
+  width: 100%;
+  background: black;
   max-width: 1160px;
   margin-left: auto;
   margin-right: auto;

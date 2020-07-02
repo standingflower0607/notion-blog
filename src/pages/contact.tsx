@@ -31,6 +31,8 @@ export default () => (
 
         <h1>Contact</h1>
 
+        <img src="/images/for_insta.jpg" alt="" />
+
         <div className={contactStyles.name}>Kan Tachibana</div>
 
         <div className={contactStyles.links}>

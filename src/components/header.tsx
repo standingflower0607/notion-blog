@@ -30,27 +30,27 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content={ogImageReplace || ogImageUrl} />
         </Head>
-        <div>
-          <div className={styles.icon}>
-            <a href="/">Canned Bananas</a>
-          </div>
-          <ul>
-            {navItems.map(({ label, page, link }) => (
-              <li key={label}>
-                {page ? (
-                  <Link href={page}>
-                    <a className={pathname === page ? 'active' : undefined}>
-                      {label}
-                    </a>
-                  </Link>
-                ) : (
-                  <ExtLink href={link}>{label}</ExtLink>
-                )}
-              </li>
-            ))}
-          </ul>
+
+        <div className={styles.icon}>
+          <a href="/">Canned Bananas</a>
         </div>
+        <ul>
+          {navItems.map(({ label, page, link }) => (
+            <li key={label}>
+              {page ? (
+                <Link href={page}>
+                  <a className={pathname === page ? 'active' : undefined}>
+                    {label}
+                  </a>
+                </Link>
+              ) : (
+                <ExtLink href={link}>{label}</ExtLink>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
+
       <div className={styles.border}></div>
     </header>
   )

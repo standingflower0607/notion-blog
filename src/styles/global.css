@@ -295,6 +295,10 @@ mark {
   text-align: center;
 }
 
+.container img {
+  max-width: 80%;
+}
+
 .dinosaur-font {
   font-family: dinosaur-font;
 }
