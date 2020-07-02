@@ -4,6 +4,8 @@
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  position: absolute; /*←絶対位置*/
+  bottom: 0; /*下に固定*/
 }
 
 .footer p {
