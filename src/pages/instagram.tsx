@@ -17,7 +17,6 @@ export default () => (
     <div className="container">
       <h1>Instagram</h1>
       <p>Here is "my Instagram" 😎, I don't have an account, though.</p>
-      <img src="../../assets/amekomi.jpg" alt="画像" />
       <Gallery photos={photos} />
     </div>
   </>

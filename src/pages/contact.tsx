@@ -27,11 +27,10 @@ export default () => (
     <Header titlePre="Contact" />
     <div className="container">
       <div className={sharedStyles.layout}>
-        <div className={contactStyles.avatar}></div>
-
         <h1>Contact</h1>
-
-        <img src="/images/for_insta.jpg" alt="" />
+        <div className={contactStyles.avatar}>
+          <img src="/images/for_insta.jpg" alt="" />
+        </div>
 
         <div className={contactStyles.name}>Kan Tachibana</div>
 

@@ -7,6 +7,9 @@
   text-align: center;
   letter-spacing: -0.02em;
   border-bottom: 1px bold black;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header ul {
@@ -33,7 +36,8 @@
 .icon {
   margin-left: 1rem;
   font-family: hanko-font;
-  font-size: 80%;
+  font-size: 1.5rem;
+  color: black;
 }
 .border {
   box-sizing: border-box;
