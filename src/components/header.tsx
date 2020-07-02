@@ -19,36 +19,39 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()
 
   return (
-    <header className={styles.header}>
-      <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} Canned Bananas</title>
-        <meta name="description" content="Kan Tachibana's Blog" />
-        <meta name="og:title" content="Canned Bananas" />
-        <meta property="og:image" content={ogImageReplace || ogImageUrl} />
-        <meta name="twitter:site" content="@banakankan" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageReplace || ogImageUrl} />
-      </Head>
-      <div>
-        <div className={styles.icon}>
-          <a href="/">Canned Bananas</a>
+    <header>
+      <div className={styles.header}>
+        <Head>
+          <title>{titlePre ? `${titlePre} |` : ''} Canned Bananas</title>
+          <meta name="description" content="Kan Tachibana's Blog" />
+          <meta name="og:title" content="Canned Bananas" />
+          <meta property="og:image" content={ogImageReplace || ogImageUrl} />
+          <meta name="twitter:site" content="@banakankan" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content={ogImageReplace || ogImageUrl} />
+        </Head>
+        <div>
+          <div className={styles.icon}>
+            <a href="/">Canned Bananas</a>
+          </div>
+          <ul>
+            {navItems.map(({ label, page, link }) => (
+              <li key={label}>
+                {page ? (
+                  <Link href={page}>
+                    <a className={pathname === page ? 'active' : undefined}>
+                      {label}
+                    </a>
+                  </Link>
+                ) : (
+                  <ExtLink href={link}>{label}</ExtLink>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul>
-          {navItems.map(({ label, page, link }) => (
-            <li key={label}>
-              {page ? (
-                <Link href={page}>
-                  <a className={pathname === page ? 'active' : undefined}>
-                    {label}
-                  </a>
-                </Link>
-              ) : (
-                <ExtLink href={link}>{label}</ExtLink>
-              )}
-            </li>
-          ))}
-        </ul>
       </div>
+      <div className={styles.border}></div>
     </header>
   )
 }
