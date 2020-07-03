@@ -59,7 +59,6 @@ body {
 
   display: flex;
   align-items: center;
-  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -298,9 +297,6 @@ mark {
   margin: 0.5rem auto;
   width: 80%;
   text-align: center;
-  position: relative;
-  padding-bottom: 4rem;
-  box-sizing: border-box;
   flex-grow: 1;
 }
 
