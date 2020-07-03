@@ -56,6 +56,11 @@ body {
 
   /* Hack */
   overflow-x: hidden;
+
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 code[class*='language-'],
@@ -295,8 +300,8 @@ mark {
   text-align: center;
   position: relative;
   padding-bottom: 4rem;
-  min-height: 100vh;
   box-sizing: border-box;
+  flex-grow: 1;
 }
 
 .container img {
