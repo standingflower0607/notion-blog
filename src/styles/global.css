@@ -56,6 +56,10 @@ body {
 
   /* Hack */
   overflow-x: hidden;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 code[class*='language-'],
@@ -267,6 +271,7 @@ a {
 }
 a:hover {
   color: #3291ff;
+  cursor: pointer;
 }
 
 .links {
@@ -287,16 +292,16 @@ mark {
   max-width: calc(100vw - var(--gap-double));
 }
 
-.icon {
-  margin-left: 1rem;
-  font-family: hanko-font;
-}
-
 .container {
   max-width: calc(600px + 10%);
   margin: 0.5rem auto;
   width: 80%;
   text-align: center;
+  flex-grow: 1;
+}
+
+.container img {
+  max-width: 80%;
 }
 
 .dinosaur-font {
@@ -337,7 +342,7 @@ h2 {
 }
 
 p {
-  color: #555;
+  color: #222;
   font-weight: 400;
   font-size: 0.94rem;
   line-height: 1.7;

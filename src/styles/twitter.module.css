@@ -1,3 +1,7 @@
 .feed {
   text-align: left;
 }
+
+.img {
+  max-width: 80%;
+}

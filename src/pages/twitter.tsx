@@ -24,6 +24,9 @@ export default () => (
       <h1>Twitter</h1>
 
       <p>Here is "my Twitter" 🤗, I don't have an account, though.</p>
+
+      <img src="/images/sejou.png" alt="" className={sharedStyles.img} />
+
       <div className={sharedStyles.feed}>
         <p>B : ....</p>
         <p>
