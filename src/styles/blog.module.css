@@ -65,6 +65,8 @@
 .postPreview {
   max-width: 600px;
   margin: 10px auto;
+  background-color: white;
+  border-radius: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -256,5 +258,6 @@
 
 .flexContainer {
   display: flex;
+  align-content: space-around;
   flex-flow: row wrap;
 }
