@@ -70,10 +70,6 @@
   transition: 0.3s;
 }
 
-.postPreview :hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
 .postContent {
   padding: 1rem 1rem;
 }
@@ -131,9 +127,12 @@
 }
 
 .post {
+  font-family: mamelon-font;
   max-width: calc(600px + 10%);
-  margin: 0 auto;
+  margin: 3rem auto;
   padding: 5%;
+  background-color: white;
+  border-radius: 5%;
 }
 
 .post :global(hr) {
