@@ -265,6 +265,6 @@
 
 .flexContainer {
   display: flex;
-  flex-wrap: wrap-reverse;
-  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
