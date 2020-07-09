@@ -267,6 +267,14 @@
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-between;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+.blogCarc {
+  transition: 0.3s;
+}
+.blogCard:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
