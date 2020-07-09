@@ -49,7 +49,7 @@ export async function getStaticProps({ preview }) {
 
 export default ({ posts = [], preview }) => {
   return (
-    <>
+    <div className="container">
       <Header titlePre="Blog" />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
@@ -64,6 +64,7 @@ export default ({ posts = [], preview }) => {
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
         <h1>My Blog</h1>
+        <p>SNSをやらない代わりに。</p>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
@@ -112,6 +113,6 @@ export default ({ posts = [], preview }) => {
           })}
         </div>
       </div>
-    </>
+    </div>
   )
 }
