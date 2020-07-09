@@ -70,6 +70,9 @@
   border-radius: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
+.postContent {
+  padding: 1rem 1rem;
+}
 
 .postPreview:last-child {
   border-bottom: none;
@@ -255,6 +258,7 @@
   height: 250px;
   object-fit: cover;
   box-shadow: none;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .flexContainer {
