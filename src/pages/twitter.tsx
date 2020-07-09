@@ -18,7 +18,7 @@ const tweets = [
   },
 ]
 export default () => (
-  <>
+  <div>
     <Header titlePre="Twitter" />
     <div className="container">
       <h1>Twitter</h1>
@@ -39,5 +39,5 @@ export default () => (
         <p>A : Is there any merits to use Twitter ?</p>
       </div>
     </div>
-  </>
+  </div>
 )
