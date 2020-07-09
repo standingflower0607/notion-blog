@@ -3,6 +3,9 @@
   margin: 1rem auto;
   max-width: 500px;
   text-align: center;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .links a {
