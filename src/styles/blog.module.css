@@ -63,9 +63,15 @@
 }
 
 .postPreview {
+  flex: 1;
   max-width: 600px;
-  margin: 10px auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: white;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.postContent {
+  padding: 1rem 1rem;
 }
 
 .postPreview:last-child {
@@ -121,9 +127,12 @@
 }
 
 .post {
+  font-family: mamelon-font;
   max-width: calc(600px + 10%);
-  margin: 0 auto;
+  margin: 3rem auto;
   padding: 5%;
+  background-color: white;
+  border-radius: 5%;
 }
 
 .post :global(hr) {
@@ -252,9 +261,12 @@
   height: 250px;
   object-fit: cover;
   box-shadow: none;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .flexContainer {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-content: space-around;
 }

@@ -32,11 +32,11 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
         </Head>
 
         <div className={styles.icon}>
-          <a href="/">Canned Bananas</a>
+          <a href="/">バナナの缶詰</a>
         </div>
-        <ul>
+        <div className={styles.list}>
           {navItems.map(({ label, page, link }) => (
-            <li key={label}>
+            <div key={label}>
               {page ? (
                 <Link href={page}>
                   <a className={pathname === page ? 'active' : undefined}>
@@ -46,9 +46,9 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
               ) : (
                 <ExtLink href={link}>{label}</ExtLink>
               )}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
       <div className={styles.border}></div>

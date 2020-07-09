@@ -5,7 +5,32 @@
 
 @font-face {
   font-family: 'dinosaur-font';
-  src: url("../../assets/fonts//KR Nicky's Dinos.ttf");
+  src: url("../../assets/fonts/KR Nicky's Dinos.ttf");
+}
+
+@font-face {
+  /** 漢字少し **/
+  font-family: 'bananaslip-font';
+  src: url('../../assets/fonts/bananaslip.otf');
+}
+
+@font-face {
+  font-family: 'coporate-font';
+  src: url('../../assets/fonts/logotypejp_mp_m_1.1.ttf');
+}
+
+@font-face {
+  font-family: 'mamelon-font';
+  src: url('../../assets/fonts/Mamelon.otf');
+}
+
+@font-face {
+  font-family: 'utsukushi-font';
+  src: url('../../assets/fonts/UtsukushiFONT.otf');
+}
+@font-face {
+  font-family: 'heiseilast-font';
+  src: url('../../assets/fonts/平成最後のフォント.otf');
 }
 
 :root {
@@ -14,7 +39,7 @@
   --gap: 1rem;
   --gap-double: 2rem;
 
-  --bg: #fff;
+  --bg: #ffd900;
   --fg: #000;
   --accents-1: #111;
   --accents-2: #333;
@@ -40,7 +65,10 @@ body {
   margin: 0;
   font-size: 20px;
 }
-
+header {
+  width: 100%;
+  background-color: #ffc600;
+}
 body {
   min-height: 100vh;
   background: var(--bg);
@@ -58,7 +86,6 @@ body {
   overflow-x: hidden;
 
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -266,11 +293,9 @@ figure {
 }
 
 a {
-  color: #0070f3;
   text-decoration: none;
 }
 a:hover {
-  color: #3291ff;
   cursor: pointer;
 }
 
@@ -303,15 +328,29 @@ mark {
 .container img {
   max-width: 80%;
 }
-
+/** fonts **/
+.bananaslip-font {
+  font-family: banaaslip-font;
+}
 .dinosaur-font {
   font-family: dinosaur-font;
+  color: rgb(127, 255, 148);
 }
 
 .hanko-font {
   font-family: hanko-font;
 }
+.utsukushi-font {
+  font-family: utsukushi-font;
+}
 
+link {
+  transition: 0.3s;
+}
+link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
 h1 {
   margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
   font-size: 2.25rem;
