@@ -63,7 +63,6 @@
 }
 
 .postPreview {
-  flex: 1;
   max-width: 600px;
   background-color: white;
   border-radius: 1rem;
@@ -267,6 +266,5 @@
 .flexContainer {
   display: flex;
   flex-wrap: wrap-reverse;
-  justify-content: space-between;
   align-content: space-around;
 }
