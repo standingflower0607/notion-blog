@@ -318,9 +318,8 @@ mark {
 }
 
 .container {
-  max-width: calc(600px + 10%);
+  max-width: calc(900px + 0%);
   margin: 0.5rem auto;
-  width: 80%;
   text-align: center;
   flex-grow: 1;
 }
