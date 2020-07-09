@@ -259,6 +259,7 @@
 
 .flexContainer {
   display: flex;
+  justify-content: space-between;
   align-content: space-around;
-  flex-flow: row wrap;
+  flex-wrap: wrap-reverse;
 }
