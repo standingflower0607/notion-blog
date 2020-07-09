@@ -267,12 +267,11 @@
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-content: space-around;
 }
 
 .blogCarc {
-  transition: 0.3s;
+  transition: 0.1s;
 }
 .blogCard:hover {
   opacity: 0.6;
