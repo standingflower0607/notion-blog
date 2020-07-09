@@ -324,9 +324,6 @@ mark {
   flex-grow: 1;
 }
 
-.container img {
-  max-width: 80%;
-}
 /** fonts **/
 .bananaslip-font {
   font-family: banaaslip-font;
