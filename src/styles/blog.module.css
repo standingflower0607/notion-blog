@@ -271,7 +271,7 @@
 
   transition: 0.1s;
 }
-.blogCard:nth-child(2n) {
+.blogCard:nth-child(3n-1) {
   margin: 2% 3%;
 }
 .blogCard:hover {
