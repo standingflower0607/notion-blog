@@ -83,14 +83,12 @@ export default ({ posts = [], preview }) => {
                       />
                     ) : null}
                     <div className={blogStyles.postContent}>
-                      <h3>
-                        <div className={blogStyles.titleContainer}>
-                          {!post.Published && (
-                            <span className={blogStyles.draftBadge}>Draft</span>
-                          )}
-                          <a>{post.Page}</a>
-                        </div>
-                      </h3>
+                      <div className={blogStyles.title}>
+                        {!post.Published && (
+                          <span className={blogStyles.draftBadge}>Draft</span>
+                        )}
+                        {post.Page}
+                      </div>
                       {/*
                   {post.Authors.length > 0 && (
                     <div className="authors">By: {post.Authors.join(' ')}</div>
@@ -100,7 +98,7 @@ export default ({ posts = [], preview }) => {
                   )}
                   */}
 
-                      <p>
+                      <p className={blogStyles.postPreview}>
                         {(!post.preview || post.preview.length === 0) &&
                           'No preview available'}
                         {(post.preview || []).map((block, idx) =>
