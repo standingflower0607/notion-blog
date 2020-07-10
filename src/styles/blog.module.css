@@ -1,5 +1,5 @@
 .blogIndex {
-  padding: 0 5%;
+  padding: 0 0;
 }
 
 .blogIndex h1 {
@@ -63,8 +63,7 @@
 }
 
 .postPreview {
-  flex: 1;
-  max-width: 600px;
+  max-width: 440px;
   background-color: white;
   border-radius: 1rem;
   transition: 0.3s;
@@ -265,8 +264,16 @@
 }
 
 .flexContainer {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-content: space-around;
+}
+
+.blogCarc {
+  transition: 0.1s;
+}
+.blogCard:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }

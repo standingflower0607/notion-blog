@@ -13,7 +13,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Me', page: '/me' },
 ]
 
-const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
+const ogImageUrl = '/images/amekomi.jpg'
 
 export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()
@@ -22,9 +22,15 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
     <header>
       <div className={styles.header}>
         <Head>
-          <title>{titlePre ? `${titlePre} |` : ''} Canned Bananas</title>
-          <meta name="description" content="Kan Tachibana's Blog" />
-          <meta name="og:title" content="Canned Bananas" />
+          <title>
+            {titlePre ? `${titlePre} |` : ''} バナナの缶詰 | Canned
+            Bananas　立花 冠/Kan Tachibana
+          </title>
+          <meta
+            name="description"
+            content="立花冠の個人サイト。SNSは基本的にやっておりませんので、私を知りたければこちらを参照していただけると幸いです。"
+          />
+          <meta name="og:title" content="バナナの缶詰 || Canned Bananas" />
           <meta property="og:image" content={ogImageReplace || ogImageUrl} />
           <meta name="twitter:site" content="@banakankan" />
           <meta name="twitter:card" content="summary_large_image" />
