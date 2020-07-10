@@ -65,13 +65,6 @@
 .postPreview {
   background-color: white;
   border-radius: 1rem;
-
-  width: 30%;
-  margin: 2% 1%;
-  box-sizing: border-box;
-}
-.postPreview :nth-child(2n) {
-  margin: 2% 3%;
 }
 
 .postContent {
@@ -272,7 +265,14 @@
 }
 
 .blogCard {
+  width: 30%;
+  margin: 2% 1%;
+  box-sizing: border-box;
+
   transition: 0.1s;
+}
+.blogCard:nth-child(2n) {
+  margin: 2% 3%;
 }
 .blogCard:hover {
   opacity: 0.6;
