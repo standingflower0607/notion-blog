@@ -254,10 +254,9 @@
 
 .postPreviewCover {
   width: 100%;
-  padding-top: calc(100% * 0.56);
+  height: 200px;
   object-fit: cover;
   box-shadow: none;
-  margin: 0;
   border-radius: 1rem 1rem 0 0;
 }
 
