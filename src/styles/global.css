@@ -365,6 +365,9 @@ h2 {
   letter-spacing: -0.02rem;
   color: var(--accents-3);
 }
+h3 {
+  font-size: 3rem;
+}
 
 .video {
   width: 1080px;

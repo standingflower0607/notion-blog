@@ -47,6 +47,8 @@ export async function getStaticProps({ preview }) {
   }
 }
 
+const defaultImage = '/images/default.jpg'
+
 export default ({ posts = [], preview }) => {
   return (
     <>
@@ -81,7 +83,12 @@ export default ({ posts = [], preview }) => {
                         )}&blockId=${post.cover.blockId}`}
                         className={blogStyles.postPreviewCover}
                       />
-                    ) : null}
+                    ) : (
+                      <img
+                        src={defaultImage}
+                        className={blogStyles.postPreviewCover}
+                      ></img>
+                    )}
                     <div className={blogStyles.postContent}>
                       <div className={blogStyles.title}>
                         {!post.Published && (
