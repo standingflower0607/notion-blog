@@ -62,16 +62,13 @@
   text-align: center;
 }
 
-.postPreview {
-  background-color: white;
-  border-radius: 1rem;
-}
-
 .postContent {
-  padding: 1rem 1rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
+  padding: 0.5rem 0.5rem;
 }
 
-.postPreview h3,
+.blogCard h3,
 .post h1 {
   margin-bottom: 0;
 }
@@ -114,7 +111,7 @@
   margin-left: 8px;
 }
 
-.postPreview :global(.posted) {
+.blogCard :global(.posted) {
   margin-bottom: 0.5em;
   flex-basis: 30%;
 }
@@ -269,7 +266,7 @@
   margin: 2% 1%;
   box-sizing: border-box;
 
-  transition: 0.1s;
+  /*transition: 0.1s;*/
 }
 .blogCard:nth-child(3n-1) {
   margin: 2% 3%;

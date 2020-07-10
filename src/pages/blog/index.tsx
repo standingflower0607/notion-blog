@@ -73,28 +73,25 @@ export default ({ posts = [], preview }) => {
             {posts.map(post => {
               return (
                 <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <a className={blogStyles.blogCard}>
-                    <div className={blogStyles.postPreview} key={post.Slug}>
-                      {post.cover ? (
-                        <img
-                          src={`/api/asset?assetUrl=${encodeURIComponent(
-                            post.cover.url as any
-                          )}&blockId=${post.cover.blockId}`}
-                          className={blogStyles.postPreviewCover}
-                        />
-                      ) : null}
-                      <div className={blogStyles.postContent}>
-                        <h3>
-                          <div className={blogStyles.titleContainer}>
-                            {!post.Published && (
-                              <span className={blogStyles.draftBadge}>
-                                Draft
-                              </span>
-                            )}
-                            <a>{post.Page}</a>
-                          </div>
-                        </h3>
-                        {/*
+                  <a className={blogStyles.blogCard} key={post.Slug}>
+                    {post.cover ? (
+                      <img
+                        src={`/api/asset?assetUrl=${encodeURIComponent(
+                          post.cover.url as any
+                        )}&blockId=${post.cover.blockId}`}
+                        className={blogStyles.postPreviewCover}
+                      />
+                    ) : null}
+                    <div className={blogStyles.postContent}>
+                      <h3>
+                        <div className={blogStyles.titleContainer}>
+                          {!post.Published && (
+                            <span className={blogStyles.draftBadge}>Draft</span>
+                          )}
+                          <a>{post.Page}</a>
+                        </div>
+                      </h3>
+                      {/*
                   {post.Authors.length > 0 && (
                     <div className="authors">By: {post.Authors.join(' ')}</div>
                   )}
@@ -103,14 +100,13 @@ export default ({ posts = [], preview }) => {
                   )}
                   */}
 
-                        <p>
-                          {(!post.preview || post.preview.length === 0) &&
-                            'No preview available'}
-                          {(post.preview || []).map((block, idx) =>
-                            textBlock(block, true, `${post.Slug}${idx}`)
-                          )}
-                        </p>
-                      </div>
+                      <p>
+                        {(!post.preview || post.preview.length === 0) &&
+                          'No preview available'}
+                        {(post.preview || []).map((block, idx) =>
+                          textBlock(block, true, `${post.Slug}${idx}`)
+                        )}
+                      </p>
                     </div>
                   </a>
                 </Link>
