@@ -63,10 +63,16 @@
 }
 
 .postPreview {
-  max-width: 440px;
   background-color: white;
   border-radius: 1rem;
   transition: 0.3s;
+
+  width: 30%;
+  margin: 2% 1%;
+  box-sizing: border-box;
+}
+.postPreview:nth-child(2n) {
+  margin: 2% 3%;
 }
 
 .postContent {
@@ -264,10 +270,10 @@
 }
 
 .flexContainer {
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
 .blogCarc {
