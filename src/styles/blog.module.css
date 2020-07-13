@@ -10,6 +10,7 @@
   display: flex;
   font-size: 1.4rem;
   flex-direction: row;
+  margin-right: 0.5rem;
 }
 
 .previewAlertContainer {
@@ -131,7 +132,6 @@
 }
 
 .post {
-  font-family: hannari-font;
   max-width: calc(600px + 10%);
   margin: 3rem auto;
   padding: 5%;
