@@ -32,7 +32,10 @@
   font-family: 'heiseilast-font';
   src: url('../../assets/fonts/平成最後のフォント.otf');
 }
-
+@font-face {
+  font-family: 'honokamarugo-font';
+  src: url('../../assets/fonts/font_1_honokamarugo_1.1.ttf');
+}
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;

@@ -67,12 +67,12 @@
   color: black;
   font-size: 1.6rem;
   font-weight: 700;
-  padding: 0.3px;
+  padding: 0.5rem;
 }
 .postPreview {
   font-size: 1.4rem;
   line-height: 1.4;
-  padding-bottom: 10px;
+  padding-bottom: 0.3rem;
   color: rgb(97, 97, 97);
 }
 
@@ -126,7 +126,7 @@
 
 .post {
   font-size: 1.8rem;
-  font-family: mamelon-font;
+  font-family: honokamarugo-font;
   max-width: calc(600px + 10%);
   margin: 3rem auto;
   padding: 5%;
