@@ -7,10 +7,12 @@
 }
 
 .blogDetails {
+  color: black;
   display: flex;
   font-size: 1.4rem;
   flex-direction: row;
   margin-right: 0.5rem;
+  white-space: nowrap;
 }
 
 .previewAlertContainer {
@@ -132,7 +134,8 @@
 }
 
 .post {
-  max-width: calc(600px + 10%);
+  font-size: 1.8rem;
+  max-width: calc(600px + 25%);
   margin: 3rem auto;
   padding: 5%;
   background-color: white;
@@ -140,6 +143,7 @@
 }
 .post p {
   font-size: 1.8rem;
+  line-height: 3.6rem;
 }
 
 .post :global(hr) {

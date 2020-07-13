@@ -168,9 +168,9 @@ const RenderPost = ({ post, redirect, preview }) => {
         ) : null}
         <h1>{post.Page || ''}</h1>
         <div className={blogStyles.blogDetails}>
-          {post.Authors.length > 0 && (
-            <div className="authors">🤔{post.Authors.join(' ')}</div>
-          )}
+          {
+            //{post.Authors.length > 0 && (<div className="authors">🤔{post.Authors.join(' ')}</div>)}
+          }
           {post.Tag && <div>🏷 {post.Tag}</div>}
           {post.Category && <div>🗂 {post.Category}</div>}
           {post.Date && <div className="posted">🗓 {getDateStr(post.Date)}</div>}
