@@ -167,14 +167,14 @@ const RenderPost = ({ post, redirect, preview }) => {
           <img src={coverURL} style={{ width: '100%', boxShadow: 'none' }} />
         ) : null}
         <h1>{post.Page || ''}</h1>
-        {post.Authors.length > 0 && (
-          <div className="authors">By: {post.Authors.join(' ')}</div>
-        )}
-        {post.Tag && <div>Tags : {post.Tag}</div>}
-        {post.Category && <div>Category : {post.Category}</div>}
-        {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
-        )}
+        <div className={blogStyles.blogDetails}>
+          {post.Authors.length > 0 && (
+            <div className="authors">🤔{post.Authors.join(' ')}</div>
+          )}
+          {post.Tag && <div>🏷 {post.Tag}</div>}
+          {post.Category && <div>🗂 {post.Category}</div>}
+          {post.Date && <div className="posted">🗓 {getDateStr(post.Date)}</div>}
+        </div>
 
         <hr />
 

@@ -99,12 +99,15 @@ export default ({ posts = [], preview }) => {
                       {/*
                   {post.Authors.length > 0 && (
                     <div className="authors">By: {post.Authors.join(' ')}</div>
-                  )}
-                  {post.Date && (
-                    <div className="posted">Posted: {getDateStr(post.Date)}</div>
-                  )}
-                  */}
-
+                      )}
+                      */}
+                      <div className={blogStyles.blogDetails}>
+                        {post.Date && (
+                          <div className="posted">
+                            🗓 {getDateStr(post.Date)}
+                          </div>
+                        )}
+                      </div>
                       <p className={blogStyles.postPreview}>
                         {(!post.preview || post.preview.length === 0) &&
                           'No preview available'}

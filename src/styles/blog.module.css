@@ -6,6 +6,12 @@
   margin-bottom: 50px;
 }
 
+.blogDetails {
+  display: flex;
+  font-size: 1.4rem;
+  flex-direction: row;
+}
+
 .previewAlertContainer {
   display: flex;
   justify-content: center;
@@ -125,13 +131,15 @@
 }
 
 .post {
-  font-size: 1.8rem;
-  font-family: honokamarugo-font;
+  font-family: hannari-font;
   max-width: calc(600px + 10%);
   margin: 3rem auto;
   padding: 5%;
   background-color: white;
   border-radius: 5%;
+}
+.post p {
+  font-size: 1.8rem;
 }
 
 .post :global(hr) {

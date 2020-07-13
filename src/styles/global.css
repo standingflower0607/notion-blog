@@ -36,6 +36,10 @@
   font-family: 'honokamarugo-font';
   src: url('../../assets/fonts/font_1_honokamarugo_1.1.ttf');
 }
+@font-face {
+  font-family: 'hannari-font';
+  src: url('../../assets/fonts/Hannari.otf');
+}
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
