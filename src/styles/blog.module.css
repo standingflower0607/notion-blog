@@ -269,14 +269,6 @@
   height: 100%;
 }
 
-.postPreviewCover {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  box-shadow: none;
-  border-radius: 1rem 1rem 0 0;
-}
-
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
@@ -294,25 +286,59 @@
 
   /*transition: 0.1s;*/
 }
-.blogCard:nth-child(3n + 2) {
-  margin: 0% 2%;
+.blogCard:nth-child(3n + 5) {
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 0.3rem;
+}
+
+.blogCard:nth-child(3n + 5) .postPreviewCover {
+  /* 黄金比 */
+  width: 100%;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0.3rem;
 }
 /* top */
 .blogCard:nth-child(1) {
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: 0.8rem;
+}
+
+.blogCard:nth-child(1) .postPreviewCover {
+  /* 黄金比 */
+  width: 61.8%;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0.8rem;
 }
 /* 2 3 */
 .blogCard:nth-child(2) {
   width: 49%;
   margin-right: 1%;
+  padding: 0.5rem;
+}
+.blogCard:nth-child(2) .postPreviewCover {
+  /* 黄金比 */
+  width: 100%;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0.5rem;
 }
 .blogCard:nth-child(3) {
   width: 49%;
   margin-left: 1%;
+  padding: 0.5rem;
 }
-
+.blogCard:nth-child(3) .postPreviewCover {
+  /* 黄金比 */
+  width: 100%;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0.5rem;
+}
 .blogCard:hover {
   opacity: 0.6;
   cursor: pointer;
