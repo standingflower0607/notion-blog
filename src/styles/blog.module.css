@@ -286,6 +286,16 @@
 
   /*transition: 0.1s;*/
 }
+.postPreviewCover {
+  background-color: white;
+  /* 黄金比 */
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  box-shadow: none;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
 .blogCard:nth-child(3n + 5) {
   margin-left: 2%;
   margin-right: 2%;
@@ -294,6 +304,7 @@
 .blogCard:nth-child(3n + 5) .postPreviewCover {
   /* 黄金比 */
   width: 100%;
+  max-height: 150px;
   object-fit: cover;
   box-shadow: none;
   padding: 0.3rem;
@@ -312,7 +323,7 @@
   max-height: 310.6178px; /* 1 : 1.91 */
   object-fit: cover;
   box-shadow: none;
-  padding: 0.8rem;
+  margin: 0.8rem;
   border-radius: 0.8rem;
 }
 /* 2 3 */
@@ -326,7 +337,7 @@
   max-height: 200px;
   object-fit: cover;
   box-shadow: none;
-  padding: 0.5rem;
+  margin: 0.5rem;
   border-radius: 0.5rem;
 }
 .blogCard:nth-child(3) {
@@ -336,12 +347,13 @@
 .blogCard:nth-child(3) .postPreviewCover {
   /* 黄金比 */
   width: 100%;
-  max-height: 150px;
+  max-height: 200px;
   object-fit: cover;
   box-shadow: none;
-  padding: 0.5rem;
+  margin: 0.5rem;
   border-radius: 0.5rem;
 }
+
 .blogCard:hover {
   opacity: 0.6;
   cursor: pointer;
