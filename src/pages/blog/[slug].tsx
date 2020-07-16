@@ -174,14 +174,18 @@ const RenderPost = ({ post, redirect, preview }) => {
           <img src={coverURL} style={{ width: '100%', boxShadow: 'none' }} />
         ) : null}
         */}
-        <h1 className={blogStyles.pageTitle}>{post.Page || ''}</h1>
-        <div className={blogStyles.blogDetails}>
-          {
-            //{post.Authors.length > 0 && (<div className="authors">🤔{post.Authors.join(' ')}</div>)}
-          }
-          {post.Tag && <div>🏷 {post.Tag}</div>}
-          {post.Category && <div>🗂 {post.Category}</div>}
-          {post.Date && <div className="posted">🗓 {getDateStr(post.Date)}</div>}
+        <div className={blogStyles.articleHeaderContents}>
+          <h1 className={blogStyles.pageTitle}>{post.Page || ''}</h1>
+          <div className={blogStyles.blogDetails}>
+            {
+              //{post.Authors.length > 0 && (<div className="authors">🤔{post.Authors.join(' ')}</div>)}
+            }
+            {post.Tag && <div>🏷 {post.Tag}</div>}
+            {post.Category && <div>🗂 {post.Category}</div>}
+            {post.Date && (
+              <div className="posted">🗓 {getDateStr(post.Date)}</div>
+            )}
+          </div>
         </div>
       </div>
       <div className={blogStyles.post}>

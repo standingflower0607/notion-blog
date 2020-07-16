@@ -7,7 +7,7 @@
 }
 
 .blogDetails {
-  color: black;
+  color: white;
   display: flex;
   font-size: 1.4rem;
   flex-direction: row;
@@ -359,14 +359,29 @@
 }
 .articleHeader {
   width: 100%;
-  max-height: 560px;
+  height: 560px;
   /* 中央よせ */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-repeat: no-repeat;
+  position: relative;
+}
+.articleHeader::after {
+  content: '';
+  background-color: var(--gray);
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.articleHeaderContents {
+  z-index: 1;
 }
 .pageTitle {
+  color: white;
   font-size: 2.5rem;
 }
