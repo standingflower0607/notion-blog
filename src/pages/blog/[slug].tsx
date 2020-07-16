@@ -164,14 +164,14 @@ const RenderPost = ({ post, redirect, preview }) => {
       )}
       <div
         className={blogStyles.articleHeader}
-        style={{ backgroundImage: coverURL }}
+        style={{ backgroundImage: `url(${coverURL})` }}
       >
         {/*
         {coverURL ? (
           <img src={coverURL} style={{ width: '100%', boxShadow: 'none' }} />
         ) : null}
         */}
-        <h1>{post.Page || ''}</h1>
+        <h1 className={blogStyles.pageTitle}>{post.Page || ''}</h1>
         <div className={blogStyles.blogDetails}>
           {
             //{post.Authors.length > 0 && (<div className="authors">🤔{post.Authors.join(' ')}</div>)}
