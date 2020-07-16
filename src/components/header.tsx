@@ -36,7 +36,7 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
         </Head>
 
         <div className={styles.icon}>
-          <a href="/">バナナの缶詰</a>
+          <a href="/blog">バナナの缶詰</a>
         </div>
         <div className={styles.list}>
           {navItems.map(({ label, page, link }) => (
