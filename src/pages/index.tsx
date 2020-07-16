@@ -11,6 +11,7 @@ export default () => (
     <Header titlePre="About" />
     <div className={sharedStyles.index}>
       <div className="container">
+        <h1>About</h1>
         <img
           className={sharedStyles.img}
           src="/images/amekomi.jpg"

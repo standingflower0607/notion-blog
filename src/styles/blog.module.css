@@ -10,7 +10,7 @@
   color: white;
   display: flex;
   font-size: 1.4rem;
-  flex-direction: row;
+  justify-content: center;
   white-space: nowrap;
 }
 .blogDetails div {
@@ -87,15 +87,6 @@
   color: rgb(97, 97, 97);
 }
 
-.blogCard h3,
-.post h1 {
-  margin-bottom: 0;
-}
-
-.post h1 {
-  margin-top: 0;
-}
-
 .post :global(h2),
 .post :global(h3) {
   margin: 3rem 0 1.5rem 0;
@@ -136,16 +127,32 @@
 }
 
 .post {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   max-width: calc(960px);
   margin: 3rem auto;
   padding: 5%;
   background-color: white;
   border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.post h1,
+.post h2,
+.post h3 {
+  background: linear-gradient(transparent 45%, var(--accents-1) 95%);
 }
 .post p {
   font-size: 1.6rem;
-  line-height: 3.6rem;
+  line-height: 3.2rem;
+}
+.post ul,
+.post ol {
+  /* クロテンが40px */
+  padding: 1.5rem 4rem;
+  margin: 1rem;
+  background-color: var(--gray);
+}
+.post li {
+  margin: 1rem;
 }
 
 .post :global(hr) {
@@ -382,7 +389,7 @@
 }
 .articleHeader::after {
   content: '';
-  background-color: var(--gray);
+  background-color: var(--blue-gray);
   opacity: 0.5;
   position: absolute;
   left: 0;
@@ -396,4 +403,6 @@
 .pageTitle {
   color: white;
   font-size: 2.5rem;
+  /* 小さい方が大きい 最後が高さ)*/
+  background: linear-gradient(transparent 45%, var(--accents-2) 15%);
 }

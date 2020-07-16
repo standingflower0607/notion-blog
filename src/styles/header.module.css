@@ -1,12 +1,12 @@
 .header {
+  color: var(--dark-brown);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 7rem;
   padding: 0.5em 0;
   text-align: center;
   letter-spacing: -0.02em;
-  max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -19,14 +19,14 @@
 
 .list a {
   font-size: 2rem;
-  color: #4a3221;
+  color: var(--dark-brown);
   padding: 0.3rem 0.6rem;
   border-radius: 0.5rem;
   text-decoration: none;
   margin-right: 1rem;
 }
 .list a:active {
-  color: #4a3221;
+  color: #2e1b0e;
   -webkit-transform: translateY(4px);
   transform: translateY(4px); /*下に動く*/
   border-bottom: none; /*線を消す*/
@@ -37,7 +37,7 @@
   -webkit-transform: translateY(4px);
   transform: translateY(4px); /*下に動く*/
   border-bottom: none; /*線を消す*/
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .icon {
@@ -48,9 +48,15 @@
 }
 
 .icon a {
-  color: black;
+  color: var(--dark-brown);
 }
-
+.sideProfile {
+  text-align: center;
+}
+.sideProfile img {
+  width: 100%;
+  border-radius: 50%;
+}
 @media (max-width: 768px) {
   .header {
     padding: 0.5em 0 2em;

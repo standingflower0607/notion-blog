@@ -52,7 +52,9 @@
   --accents-2: #a0dbdb;
   --accents-3: #56a7a7;
   --accents-4: #f9fbfc;
-  --gray: #b4d1ccb6;
+  --blue-gray: #b4d1ccb6;
+  --gray: #f7f9f9;
+  --dark-brown: #4a3221;
   --geist-foreground: #000;
 
   --radius: 8px;
@@ -300,12 +302,14 @@ figure {
   font-size: 0.85rem;
   color: #999;
 }
-
+/* 色指定しないとreactのlinkで紫になる */
 a {
+  color: black;
   text-decoration: none;
 }
 a:hover {
   cursor: pointer;
+  color: rgb(59, 59, 59);
 }
 
 .links {
@@ -324,6 +328,14 @@ mark {
 
 .logo :global(svg) {
   max-width: calc(100vw - var(--gap-double));
+}
+/* blockquote */
+blockquote {
+  font-style: italic;
+  padding: 1.5rem 4rem;
+  margin: 1rem;
+  background-color: var(--gray);
+  color: #464646;
 }
 
 .container {
@@ -368,10 +380,8 @@ h1 {
 }
 
 h2 {
-  font-weight: 300;
   font-size: 4rem;
   letter-spacing: -0.02rem;
-  color: var(--accents-3);
 }
 h3 {
   font-size: 3rem;
@@ -426,6 +436,83 @@ code {
   width: 130%;
   background: #fff;
   transform: skew(-20deg);
+}
+/* menu */
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 18px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--dark-brown);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: var(--accents-3);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: var(--bg);
+  padding: 2.5em 1em 0;
+  font-size: 3rem;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  color: #b8b7ad;
+  padding: 0.1em;
+}
+
+/* Individual item */
+.bm-item {
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  outline: none;
+}
+.bm-item a {
+  color: var(--dark-brown);
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 600px) {
