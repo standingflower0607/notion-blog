@@ -148,7 +148,7 @@ const RenderPost = ({ post, redirect, preview }) => {
       )}&blockId=${post.cover.blockId}`
     : undefined
   const backgroundImageURL = post.Category
-    ? `${imgPath}${post.Category}/${post.Category}` +
+    ? `${imgPath}${post.Category.toLowerCase()}/${post.Category.toLowerCase()}` +
       Math.ceil(Math.random() * 10) +
       '.jpg'
     : defaultImage

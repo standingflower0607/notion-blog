@@ -84,7 +84,7 @@ export default ({ posts = [], preview }) => {
                     {post.Category ? (
                       <img
                         src={
-                          `${imgPath}${post.Category}/${post.Category}` +
+                          `${imgPath}${post.Category.toLowerCase()}/${post.Category.toLowerCase()}` +
                           Math.ceil(Math.random() * 10) +
                           '.jpg'
                         }
