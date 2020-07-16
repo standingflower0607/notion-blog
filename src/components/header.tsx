@@ -14,7 +14,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
 ]
 
 const ogImageUrl = '/images/amekomi.jpg'
-const profileImage = '/images/for_insta.jpg'
+const profileImage = '/images/for_insta_compressed.jpg'
 
 export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()

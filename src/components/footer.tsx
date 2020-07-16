@@ -8,7 +8,7 @@ export default () => (
       <div className={styles.footerWrapper}>
         <div className={styles.footerRight}>
           <div className={styles.footerProfile}>
-            <img src="/images/for_insta.jpg" alt="" />
+            <img src="/images/for_insta_compressed.jpg" alt="" />
           </div>
         </div>
         <div className={styles.footerLeft}>

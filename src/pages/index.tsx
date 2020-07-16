@@ -14,7 +14,7 @@ export default () => (
         <h1>About</h1>
         <img
           className={sharedStyles.img}
-          src="/images/amekomi.jpg"
+          src="/images/favicon.jpg"
           alt="画像"
         />
         <p>バナナの缶詰とは、立花冠の個人ブログです。</p>

@@ -18,7 +18,7 @@ export default () => (
       <div className={sharedStyles.layout}>
         <h1>Contact</h1>
         <div className={contactStyles.avatar}>
-          <img src="/images/for_insta.jpg" alt="" />
+          <img src="/images/for_insta_compressed.jpg" alt="" />
         </div>
 
         <div className={contactStyles.name}>Kan Tachibana</div>
