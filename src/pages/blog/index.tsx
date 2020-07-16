@@ -37,6 +37,8 @@ export async function getStaticProps({ preview }) {
   posts.map(post => {
     post.Authors = post.Authors.map(id => users[id].full_name)
   })
+  // reverse
+  posts.reverse()
 
   return {
     props: {
@@ -48,6 +50,7 @@ export async function getStaticProps({ preview }) {
 }
 
 const defaultImage = '/images/default.jpg'
+const imgPath = '/images/'
 
 export default ({ posts = [], preview }) => {
   return (
@@ -67,7 +70,9 @@ export default ({ posts = [], preview }) => {
       <div className="container">
         <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
           <h1>My Blog</h1>
-          <p className="utsukushi-font">SNSをやらない代わりに。</p>
+          <p className="utsukushi-font">
+            SNSをやらない代わりに。第三者がいない1対多コミュニーケーション。
+          </p>
           {posts.length === 0 && (
             <p className={blogStyles.noPosts}>There are no posts yet</p>
           )}
@@ -76,11 +81,13 @@ export default ({ posts = [], preview }) => {
               return (
                 <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
                   <a className={blogStyles.blogCard} key={post.Slug}>
-                    {post.cover ? (
+                    {post.Category ? (
                       <img
-                        src={`/api/asset?assetUrl=${encodeURIComponent(
-                          post.cover.url as any
-                        )}&blockId=${post.cover.blockId}`}
+                        src={
+                          `${imgPath}${post.Category}/${post.Category}` +
+                          Math.ceil(Math.random() * 10) +
+                          '.jpg'
+                        }
                         className={blogStyles.postPreviewCover}
                       />
                     ) : (
@@ -103,8 +110,11 @@ export default ({ posts = [], preview }) => {
                       */}
                       <div className={blogStyles.blogDetails}>
                         {post.Date && (
-                          <div className="posted">{getDateStr(post.Date)}</div>
+                          <div className="posted">
+                            🗓 {getDateStr(post.Date)}
+                          </div>
                         )}
+                        {post.Category && <div>🗂 {post.Category}</div>}
                       </div>
                       <p className={blogStyles.postPreview}>
                         {(!post.preview || post.preview.length === 0) &&

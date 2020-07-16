@@ -138,12 +138,20 @@ const RenderPost = ({ post, redirect, preview }) => {
     )
   }
 
+  const defaultImage = '/images/default.jpg'
+  const imgPath = '/images/'
+
   // cover
   const coverURL = post.cover
     ? `/api/asset?assetUrl=${encodeURIComponent(
         post.cover.url as any
       )}&blockId=${post.cover.blockId}`
     : undefined
+  const backgroundImageURL = post.Category
+    ? `${imgPath}${post.Category}/${post.Category}` +
+      Math.ceil(Math.random() * 10) +
+      '.jpg'
+    : defaultImage
   const ogImageReplace = coverURL
     ? `https://notion-blog-customized.now.sh/${coverURL}`
     : undefined
@@ -165,7 +173,7 @@ const RenderPost = ({ post, redirect, preview }) => {
       <div
         className={blogStyles.articleHeader}
         style={{
-          backgroundImage: `url(${coverURL})`,
+          backgroundImage: `url(${backgroundImageURL})`,
           backgroundSize: 'cover',
         }}
       >
@@ -180,11 +188,11 @@ const RenderPost = ({ post, redirect, preview }) => {
             {
               //{post.Authors.length > 0 && (<div className="authors">🤔{post.Authors.join(' ')}</div>)}
             }
-            {post.Tag && <div>🏷 {post.Tag}</div>}
-            {post.Category && <div>🗂 {post.Category}</div>}
             {post.Date && (
               <div className="posted">🗓 {getDateStr(post.Date)}</div>
             )}
+            {post.Category && <div>🗂 {post.Category}</div>}
+            {post.Tag && <div>🏷 {post.Tag}</div>}
           </div>
         </div>
       </div>
