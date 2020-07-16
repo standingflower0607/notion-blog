@@ -285,7 +285,19 @@
   margin-bottom: 2%;
   box-sizing: border-box;
 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  animation: populate 0.5s ease-out normal backwards;
+
   /*transition: 0.1s;*/
+}
+.blogCard:hover {
+  transform: scale(1.01);
+  z-index: 1;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+.blogCard .blogDetails {
+  color: black;
 }
 .postPreviewCover {
   /* 黄金比 */

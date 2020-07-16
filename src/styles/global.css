@@ -52,7 +52,7 @@
   --accents-2: #a0dbdb;
   --accents-3: #56a7a7;
   --accents-4: #f9fbfc;
-  --gray: #d1dddb;
+  --gray: #b4d1ccb6;
   --geist-foreground: #000;
 
   --radius: 8px;
@@ -93,9 +93,6 @@ body {
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
-
-  /* Hack */
-  overflow-x: hidden;
 
   display: flex;
   flex-direction: column;

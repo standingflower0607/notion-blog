@@ -103,9 +103,7 @@ export default ({ posts = [], preview }) => {
                       */}
                       <div className={blogStyles.blogDetails}>
                         {post.Date && (
-                          <div className="posted">
-                            🗓 {getDateStr(post.Date)}
-                          </div>
+                          <div className="posted">{getDateStr(post.Date)}</div>
                         )}
                       </div>
                       <p className={blogStyles.postPreview}>
