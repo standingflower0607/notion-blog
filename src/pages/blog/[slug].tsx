@@ -164,7 +164,10 @@ const RenderPost = ({ post, redirect, preview }) => {
       )}
       <div
         className={blogStyles.articleHeader}
-        style={{ backgroundImage: `url(${coverURL})` }}
+        style={{
+          backgroundImage: `url(${coverURL})`,
+          backgroundSize: 'cover',
+        }}
       >
         {/*
         {coverURL ? (
