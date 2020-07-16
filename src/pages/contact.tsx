@@ -4,23 +4,12 @@ import ExtLink from '../components/ext-link'
 import sharedStyles from '../styles/shared.module.css'
 import contactStyles from '../styles/contact.module.css'
 
+import contacts from '../../public/contacts'
+
 import GitHub from '../components/svgs/github'
 import Twitter from '../components/svgs/twitter'
 import Envelope from '../components/svgs/envelope'
 import LinkedIn from '../components/svgs/linkedin'
-
-const contacts = [
-  {
-    Comp: GitHub,
-    alt: 'github icon',
-    link: 'https://github.com/standingflower0607',
-  },
-  {
-    Comp: Envelope,
-    alt: 'envelope icon',
-    link: 'mailto:tachibanaa1211@gmail.com?subject=hello',
-  },
-]
 
 export default () => (
   <>
@@ -29,16 +18,16 @@ export default () => (
       <div className={sharedStyles.layout}>
         <h1>Contact</h1>
         <div className={contactStyles.avatar}>
-          <img src="/images/for_insta.jpg" alt="" />
+          <img src="/images/for_insta_compressed.jpg" alt="" />
         </div>
 
         <div className={contactStyles.name}>Kan Tachibana</div>
 
         <div className={contactStyles.links}>
-          {contacts.map(({ Comp, link, alt }) => {
+          {contacts.map(({ icon, link, alt }) => {
             return (
               <ExtLink key={link} href={link} aria-label={alt}>
-                <Comp height={32} />
+                <i className={icon} />
               </ExtLink>
             )
           })}

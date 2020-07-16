@@ -25,7 +25,11 @@ export default () => (
 
       <p>Here is "my Twitter" 🤗, I don't have an account, though.</p>
 
-      <img src="/images/sejou.png" alt="" className={sharedStyles.img} />
+      <img
+        src="/images/sejou_compressed.jpg"
+        alt=""
+        className={sharedStyles.img}
+      />
 
       <div className={sharedStyles.feed}>
         <p>B : ....</p>

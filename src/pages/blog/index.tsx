@@ -24,6 +24,8 @@ export async function getStaticProps({ preview }) {
       if (!preview && !postIsPublished(post)) {
         return null
       }
+      // Hiddenはindexに出さない
+      if (post.Hidden) return null
       post.Authors = post.Authors || []
       for (const author of post.Authors) {
         authorsToGet.add(author)
@@ -38,6 +40,9 @@ export async function getStaticProps({ preview }) {
     post.Authors = post.Authors.map(id => users[id].full_name)
   })
 
+  // reverse
+  posts.reverse()
+
   return {
     props: {
       preview: preview || false,
@@ -46,6 +51,9 @@ export async function getStaticProps({ preview }) {
     unstable_revalidate: 10,
   }
 }
+
+const defaultImage = '/images/default.jpg'
+const imgPath = '/images/'
 
 export default ({ posts = [], preview }) => {
   return (
@@ -65,7 +73,9 @@ export default ({ posts = [], preview }) => {
       <div className="container">
         <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
           <h1>My Blog</h1>
-          <p className="utsukushi-font">SNSをやらない代わりに。</p>
+          <p className="utsukushi-font">
+            SNSをやらない代わりに。第三者がいない1対多コミュニーケーション。
+          </p>
           {posts.length === 0 && (
             <p className={blogStyles.noPosts}>There are no posts yet</p>
           )}
@@ -73,44 +83,49 @@ export default ({ posts = [], preview }) => {
             {posts.map(post => {
               return (
                 <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <a className={blogStyles.blogCard}>
-                    <div className={blogStyles.postPreview} key={post.Slug}>
-                      {post.cover ? (
-                        <img
-                          src={`/api/asset?assetUrl=${encodeURIComponent(
-                            post.cover.url as any
-                          )}&blockId=${post.cover.blockId}`}
-                          className={blogStyles.postPreviewCover}
-                        />
-                      ) : null}
-                      <div className={blogStyles.postContent}>
-                        <h3>
-                          <div className={blogStyles.titleContainer}>
-                            {!post.Published && (
-                              <span className={blogStyles.draftBadge}>
-                                Draft
-                              </span>
-                            )}
-                            <a>{post.Page}</a>
-                          </div>
-                        </h3>
-                        {/*
+                  <a className={blogStyles.blogCard} key={post.Slug}>
+                    {post.Category ? (
+                      <img
+                        src={
+                          `${imgPath}${post.Category.toLowerCase()}/${post.Category.toLowerCase()}` +
+                          Math.ceil(Math.random() * 10) +
+                          '.jpg'
+                        }
+                        className={blogStyles.postPreviewCover}
+                      />
+                    ) : (
+                      <img
+                        src={defaultImage}
+                        className={blogStyles.postPreviewCover}
+                      ></img>
+                    )}
+                    <div className={blogStyles.postContent}>
+                      <div className={blogStyles.title}>
+                        {!post.Published && (
+                          <span className={blogStyles.draftBadge}>Draft</span>
+                        )}
+                        {post.Page}
+                      </div>
+                      {/*
                   {post.Authors.length > 0 && (
                     <div className="authors">By: {post.Authors.join(' ')}</div>
-                  )}
-                  {post.Date && (
-                    <div className="posted">Posted: {getDateStr(post.Date)}</div>
-                  )}
-                  */}
-
-                        <p>
-                          {(!post.preview || post.preview.length === 0) &&
-                            'No preview available'}
-                          {(post.preview || []).map((block, idx) =>
-                            textBlock(block, true, `${post.Slug}${idx}`)
-                          )}
-                        </p>
+                      )}
+                      */}
+                      <div className={blogStyles.blogDetails}>
+                        {post.Date && (
+                          <div className="posted">
+                            🗓 {getDateStr(post.Date)}
+                          </div>
+                        )}
+                        {post.Category && <div>🗂 {post.Category}</div>}
                       </div>
+                      <p className={blogStyles.postPreview}>
+                        {(!post.preview || post.preview.length === 0) &&
+                          'No preview available'}
+                        {(post.preview || []).map((block, idx) =>
+                          textBlock(block, true, `${post.Slug}${idx}`)
+                        )}
+                      </p>
                     </div>
                   </a>
                 </Link>

@@ -1,16 +1,14 @@
 .header {
+  color: var(--dark-brown);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 4rem;
+  height: 7rem;
   padding: 0.5em 0;
   text-align: center;
   letter-spacing: -0.02em;
-  border-bottom: 1px bold #4a3221;
-  max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffc600;
 }
 
 .list {
@@ -20,49 +18,46 @@
 }
 
 .list a {
-  color: #4a3221;
-  background-color: #e1a149;
+  font-size: 2rem;
+  color: var(--dark-brown);
   padding: 0.3rem 0.6rem;
   border-radius: 0.5rem;
   text-decoration: none;
   margin-right: 1rem;
-  border-bottom: solid 4px #fdd882;
 }
 .list a:active {
-  color: #d4b09a;
+  color: #2e1b0e;
   -webkit-transform: translateY(4px);
   transform: translateY(4px); /*下に動く*/
   border-bottom: none; /*線を消す*/
 }
 /* url的active */
 .header :global(a.active) {
-  color: #fff4dc;
+  color: #4a3221;
   -webkit-transform: translateY(4px);
   transform: translateY(4px); /*下に動く*/
   border-bottom: none; /*線を消す*/
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .icon {
   margin-left: 1rem;
   font-family: mamelon-font;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   color: #4a3221;
+  background: linear-gradient(transparent 45%, var(--accents-1) 80%);
 }
 
 .icon a {
-  color: black;
+  color: var(--dark-brown);
 }
-.border {
-  box-sizing: border-box;
-  height: 1px;
+.sideProfile {
+  text-align: center;
+}
+.sideProfile img {
   width: 100%;
-  background: black;
-  max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 50%;
 }
-
 @media (max-width: 768px) {
   .header {
     padding: 0.5em 0 2em;

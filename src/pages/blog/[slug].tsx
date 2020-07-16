@@ -138,12 +138,20 @@ const RenderPost = ({ post, redirect, preview }) => {
     )
   }
 
+  const defaultImage = '/images/default.jpg'
+  const imgPath = '/images/'
+
   // cover
   const coverURL = post.cover
     ? `/api/asset?assetUrl=${encodeURIComponent(
         post.cover.url as any
       )}&blockId=${post.cover.blockId}`
     : undefined
+  const backgroundImageURL = post.Category
+    ? `${imgPath}${post.Category.toLowerCase()}/${post.Category.toLowerCase()}` +
+      Math.ceil(Math.random() * 10) +
+      '.jpg'
+    : defaultImage
   const ogImageReplace = coverURL
     ? `https://notion-blog-customized.now.sh/${coverURL}`
     : undefined
@@ -162,22 +170,33 @@ const RenderPost = ({ post, redirect, preview }) => {
           </div>
         </div>
       )}
-      <div className={blogStyles.post}>
+      <div
+        className={blogStyles.articleHeader}
+        style={{
+          backgroundImage: `url(${backgroundImageURL})`,
+          backgroundSize: 'cover',
+        }}
+      >
+        {/*
         {coverURL ? (
           <img src={coverURL} style={{ width: '100%', boxShadow: 'none' }} />
         ) : null}
-        <h1>{post.Page || ''}</h1>
-        {post.Authors.length > 0 && (
-          <div className="authors">By: {post.Authors.join(' ')}</div>
-        )}
-        {post.Tag && <div>Tags : {post.Tag}</div>}
-        {post.Category && <div>Category : {post.Category}</div>}
-        {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
-        )}
-
-        <hr />
-
+        */}
+        <div className={blogStyles.articleHeaderContents}>
+          <h1 className={blogStyles.pageTitle}>{post.Page || ''}</h1>
+          <div className={blogStyles.blogDetails}>
+            {
+              //{post.Authors.length > 0 && (<div className="authors">🤔{post.Authors.join(' ')}</div>)}
+            }
+            {post.Date && (
+              <div className="posted">🗓 {getDateStr(post.Date)}</div>
+            )}
+            {post.Category && <div>🗂 {post.Category}</div>}
+            {post.Tag && <div>🏷 {post.Tag}</div>}
+          </div>
+        </div>
+      </div>
+      <div className={blogStyles.post}>
         {(!post.content || post.content.length === 0) && (
           <p>This post has no content</p>
         )}

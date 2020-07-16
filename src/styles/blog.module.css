@@ -6,6 +6,17 @@
   margin-bottom: 50px;
 }
 
+.blogDetails {
+  color: white;
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: center;
+  white-space: nowrap;
+}
+.blogDetails div {
+  margin-right: 0.5rem;
+}
+
 .previewAlertContainer {
   display: flex;
   justify-content: center;
@@ -43,11 +54,6 @@
   cursor: pointer;
 }
 
-.titleContainer {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-}
 .draftBadge {
   border-radius: 16px;
   background-color: black;
@@ -61,29 +67,24 @@
 .noPosts {
   text-align: center;
 }
-
-.postPreview {
-  max-width: 440px;
-  background-color: white;
-  border-radius: 1rem;
-  transition: 0.3s;
-}
-
 .postContent {
-  padding: 1rem 1rem;
+  flex-grow: 1;
+  margin: 0;
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
+  padding: 0.5rem 0.5rem;
 }
-
-.postPreview:last-child {
-  border-bottom: none;
+.title {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0.5rem;
 }
-
-.postPreview h3,
-.post h1 {
-  margin-bottom: 0;
-}
-
-.post h1 {
-  margin-top: 0;
+.postPreview {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  padding-bottom: 0.3rem;
+  color: rgb(97, 97, 97);
 }
 
 .post :global(h2),
@@ -120,18 +121,35 @@
   margin-left: 8px;
 }
 
-.postPreview :global(.posted) {
+.blogCard :global(.posted) {
   margin-bottom: 0.5em;
   flex-basis: 30%;
 }
 
 .post {
-  font-family: mamelon-font;
-  max-width: calc(600px + 10%);
+  color: var(--dark-brown);
+  font-size: 1.6rem;
+  max-width: calc(960px);
   margin: 3rem auto;
-  padding: 5%;
+  padding: 5rem 16rem;
   background-color: white;
-  border-radius: 5%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post p {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+.post ul,
+.post ol {
+  /* クロテンが40px */
+  padding: 1.5rem 4rem;
+  margin: 1rem;
+  background-color: var(--gray);
+}
+.post li {
+  margin: 1rem;
 }
 
 .post :global(hr) {
@@ -255,25 +273,133 @@
   height: 100%;
 }
 
-.postPreviewCover {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  box-shadow: none;
-  border-radius: 1rem 1rem 0 0;
-}
-
 .flexContainer {
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
-.blogCarc {
-  transition: 0.1s;
+.blogCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  padding: 0.3rem;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  animation: populate 0.5s ease-out normal backwards;
+
+  /*transition: 0.1s;*/
 }
+.blogCard:hover {
+  transform: scale(1.01);
+  z-index: 1;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+}
+.blogCard .blogDetails {
+  color: black;
+}
+.postPreviewCover {
+  /* 黄金比 */
+  width: 100%;
+  max-height: 150px;
+  box-shadow: none;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+.blogCard:nth-child(3n + 5) {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.blogCard:nth-child(3n + 5) .postPreviewCover {
+  /* 黄金比 */
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0.3rem;
+}
+/* top */
+.blogCard:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.blogCard:nth-child(1) .postPreviewCover {
+  /* 黄金比 */
+  width: 61.8%; /* 593.23 */
+  max-height: 310.6178px; /* 1 : 1.91 */
+  object-fit: cover;
+  box-shadow: none;
+  margin: 0.8rem;
+  border-radius: 0.8rem;
+}
+/* 2 3 */
+.blogCard:nth-child(2) {
+  width: 49%;
+  margin-right: 1%;
+}
+.blogCard:nth-child(2) .postPreviewCover {
+  width: 99%;
+  max-height: 200px;
+  object-fit: cover;
+  box-shadow: none;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+.blogCard:nth-child(3) {
+  width: 49%;
+  margin-left: 1%;
+}
+.blogCard:nth-child(3) .postPreviewCover {
+  /* 黄金比 */
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  box-shadow: none;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
 .blogCard:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+.articleHeader {
+  width: 100%;
+  height: 560px;
+  /* 中央よせ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.articleHeader::after {
+  content: '';
+  background-color: var(--blue-gray);
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.articleHeaderContents {
+  z-index: 1;
+}
+.pageTitle {
+  color: white;
+  font-size: 2.5rem;
+  /* 小さい方が大きい 最後が高さ)*/
+  background: linear-gradient(transparent 45%, var(--accents-2) 15%);
 }
