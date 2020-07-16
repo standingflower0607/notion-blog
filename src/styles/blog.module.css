@@ -277,6 +277,7 @@
 }
 
 .blogCard {
+  background-color: white;
   display: flex;
   flex-direction: column;
   width: 32%;
@@ -287,7 +288,6 @@
   /*transition: 0.1s;*/
 }
 .postPreviewCover {
-  background-color: white;
   /* 黄金比 */
   width: 100%;
   max-height: 150px;
@@ -357,4 +357,8 @@
 .blogCard:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+.articleHeader {
+  width: 100%;
+  max-height: 560px;
 }
