@@ -2,15 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8rem;
+  height: 7rem;
   padding: 0.5em 0;
   text-align: center;
   letter-spacing: -0.02em;
-  border-bottom: 1px bold #4a3221;
   max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ffc600;
 }
 
 .list {
@@ -22,22 +20,20 @@
 .list a {
   font-size: 2rem;
   color: #4a3221;
-  background-color: #e1a149;
   padding: 0.3rem 0.6rem;
   border-radius: 0.5rem;
   text-decoration: none;
   margin-right: 1rem;
-  border-bottom: solid 4px #fdd882;
 }
 .list a:active {
-  color: #d4b09a;
+  color: #4a3221;
   -webkit-transform: translateY(4px);
   transform: translateY(4px); /*下に動く*/
   border-bottom: none; /*線を消す*/
 }
 /* url的active */
 .header :global(a.active) {
-  color: #fff4dc;
+  color: #4a3221;
   -webkit-transform: translateY(4px);
   transform: translateY(4px); /*下に動く*/
   border-bottom: none; /*線を消す*/
@@ -53,15 +49,6 @@
 
 .icon a {
   color: black;
-}
-.border {
-  box-sizing: border-box;
-  height: 1px;
-  width: 100%;
-  background: black;
-  max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media (max-width: 768px) {

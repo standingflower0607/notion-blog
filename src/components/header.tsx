@@ -5,11 +5,9 @@ import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
-  { label: 'Home', page: '/' },
   { label: 'Blog', page: '/blog' },
+  { label: 'About', page: '/' },
   { label: 'Contact', page: '/contact' },
-  { label: 'Instagram', page: '/instagram' },
-  { label: 'Twitter', page: '/twitter' },
   { label: 'Me', page: '/me' },
 ]
 
@@ -56,8 +54,6 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
           ))}
         </div>
       </div>
-
-      <div className={styles.border}></div>
     </header>
   )
 }

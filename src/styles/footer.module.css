@@ -1,5 +1,5 @@
 .footer {
-  background-color: #4a3221;
+  background-color: var(--accents-3);
   color: white;
   width: 100%;
   margin-top: auto;

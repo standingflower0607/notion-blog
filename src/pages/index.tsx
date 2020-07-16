@@ -8,7 +8,7 @@ import sharedStyles from '../styles/shared.module.css'
 
 export default () => (
   <>
-    <Header titlePre="Home" />
+    <Header titlePre="About" />
     <div className={sharedStyles.index}>
       <div className="container">
         <img
@@ -16,7 +16,7 @@ export default () => (
           src="/images/amekomi.jpg"
           alt="画像"
         />
-        <h1 className="utsukushi-font">Kan Tachibana / 立花 冠</h1>
+        <p>バナナの缶詰とは、立花冠の個人ブログです。</p>
         <p className="utsukushi-font">
           夢がないので、平等な機会を作りたいです。それが夢かもしれません。そして、自分がそれで幸せを感じれれば十分ですわ。
         </p>

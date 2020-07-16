@@ -5,10 +5,7 @@ import styles from '../styles/footer.module.css'
 export default () => (
   <>
     <footer className={styles.footer}>
-      <Link href={'/aboutBlog'}>
-        <p>このブログについて</p>
-      </Link>
-      <p>&copy; Canned Bananas 2020 / 🧍🏻‍♀+ 🌸+ 👑 = 🍌</p>
+      <p>&copy; Canned Bananas 2020 / 🧍🏻‍♀ + 🌸 + 👑 = 🍌 </p>
     </footer>
   </>
 )
