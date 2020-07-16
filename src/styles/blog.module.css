@@ -127,19 +127,16 @@
 }
 
 .post {
+  color: var(--dark-brown);
   font-size: 1.6rem;
   max-width: calc(960px);
   margin: 3rem auto;
-  padding: 5%;
+  padding: 5rem 16rem;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.post h1,
-.post h2,
-.post h3 {
-  background: linear-gradient(transparent 45%, var(--accents-1) 95%);
-}
+
 .post p {
   font-size: 1.6rem;
   line-height: 3.2rem;

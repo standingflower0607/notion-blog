@@ -24,6 +24,8 @@ export async function getStaticProps({ preview }) {
       if (!preview && !postIsPublished(post)) {
         return null
       }
+      // Hiddenはindexに出さない
+      if (post.Hidden) return null
       post.Authors = post.Authors || []
       for (const author of post.Authors) {
         authorsToGet.add(author)
@@ -37,6 +39,7 @@ export async function getStaticProps({ preview }) {
   posts.map(post => {
     post.Authors = post.Authors.map(id => users[id].full_name)
   })
+
   // reverse
   posts.reverse()
 
