@@ -162,10 +162,15 @@ const RenderPost = ({ post, redirect, preview }) => {
           </div>
         </div>
       )}
-      <div className={blogStyles.post}>
+      <div
+        className={blogStyles.articleHeader}
+        style={{ backgroundImage: coverURL }}
+      >
+        {/*
         {coverURL ? (
           <img src={coverURL} style={{ width: '100%', boxShadow: 'none' }} />
         ) : null}
+        */}
         <h1>{post.Page || ''}</h1>
         <div className={blogStyles.blogDetails}>
           {
@@ -175,9 +180,8 @@ const RenderPost = ({ post, redirect, preview }) => {
           {post.Category && <div>🗂 {post.Category}</div>}
           {post.Date && <div className="posted">🗓 {getDateStr(post.Date)}</div>}
         </div>
-
-        <hr />
-
+      </div>
+      <div className={blogStyles.post}>
         {(!post.content || post.content.length === 0) && (
           <p>This post has no content</p>
         )}
