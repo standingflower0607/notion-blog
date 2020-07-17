@@ -129,12 +129,9 @@
 .post {
   color: var(--dark-brown);
   font-size: 1.6rem;
-  max-width: calc(960px);
-  margin: 3rem auto;
-  padding: 5rem 16rem;
+  width: 100%;
+  padding: 2rem 1.6rem;
   background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post p {
@@ -285,7 +282,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 32%;
+  width: 100%;
   margin-top: 2%;
   margin-bottom: 2%;
   box-sizing: border-box;
@@ -297,14 +294,7 @@
 
   /*transition: 0.1s;*/
 }
-.blogCard:hover {
-  transform: scale(1.01);
-  z-index: 1;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
-}
-.blogCard .blogDetails {
-  color: black;
-}
+
 .postPreviewCover {
   /* 黄金比 */
   width: 100%;
@@ -313,60 +303,14 @@
   margin: 0.5rem;
   border-radius: 0.5rem;
 }
-.blogCard:nth-child(3n + 5) {
-  margin-left: 2%;
-  margin-right: 2%;
-}
 
-.blogCard:nth-child(3n + 5) .postPreviewCover {
-  /* 黄金比 */
-  width: 100%;
-  max-height: 150px;
-  object-fit: cover;
-  box-shadow: none;
-  border-radius: 0.3rem;
+.blogCard:hover {
+  transform: scale(1.01);
+  z-index: 1;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
 }
-/* top */
-.blogCard:nth-child(1) {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.blogCard:nth-child(1) .postPreviewCover {
-  /* 黄金比 */
-  width: 61.8%; /* 593.23 */
-  max-height: 310.6178px; /* 1 : 1.91 */
-  object-fit: cover;
-  box-shadow: none;
-  margin: 0.8rem;
-  border-radius: 0.8rem;
-}
-/* 2 3 */
-.blogCard:nth-child(2) {
-  width: 49%;
-  margin-right: 1%;
-}
-.blogCard:nth-child(2) .postPreviewCover {
-  width: 99%;
-  max-height: 200px;
-  object-fit: cover;
-  box-shadow: none;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-}
-.blogCard:nth-child(3) {
-  width: 49%;
-  margin-left: 1%;
-}
-.blogCard:nth-child(3) .postPreviewCover {
-  /* 黄金比 */
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  box-shadow: none;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
+.blogCard .blogDetails {
+  color: black;
 }
 
 .blogCard:hover {
@@ -399,7 +343,114 @@
 }
 .pageTitle {
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   /* 小さい方が大きい 最後が高さ)*/
   background: linear-gradient(transparent 45%, var(--accents-2) 15%);
+}
+/*　スマホ縦 */
+
+/*タブレット*/
+@media screen and (min-width: 560px) {
+}
+/* pc */
+@media screen and (min-width: 960px) {
+  .post {
+    color: var(--dark-brown);
+    font-size: 1.6rem;
+    max-width: calc(960px);
+    margin: 3rem auto;
+    padding: 5rem 16rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .pageTitle {
+    color: white;
+    font-size: 2.5rem;
+    /* 小さい方が大きい 最後が高さ)*/
+    background: linear-gradient(transparent 45%, var(--accents-2) 15%);
+  }
+
+  .blogCard {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+    padding: 0.3rem;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+    animation: populate 0.5s ease-out normal backwards;
+
+    /*transition: 0.1s;*/
+  }
+
+  .postPreviewCover {
+    /* 黄金比 */
+    width: 100%;
+    max-height: 150px;
+    box-shadow: none;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .blogCard:nth-child(3n + 5) {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .blogCard:nth-child(3n + 5) .postPreviewCover {
+    /* 黄金比 */
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    box-shadow: none;
+    border-radius: 0.3rem;
+  }
+  /* top */
+  .blogCard:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .blogCard:nth-child(1) .postPreviewCover {
+    /* 黄金比 */
+    width: 61.8%; /* 593.23 */
+    max-height: 310.6178px; /* 1 : 1.91 */
+    object-fit: cover;
+    box-shadow: none;
+    margin: 0.8rem;
+    border-radius: 0.8rem;
+  }
+  /* 2 3 */
+  .blogCard:nth-child(2) {
+    width: 49%;
+    margin-right: 1%;
+  }
+  .blogCard:nth-child(2) .postPreviewCover {
+    width: 99%;
+    max-height: 200px;
+    object-fit: cover;
+    box-shadow: none;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .blogCard:nth-child(3) {
+    width: 49%;
+    margin-left: 1%;
+  }
+  .blogCard:nth-child(3) .postPreviewCover {
+    /* 黄金比 */
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    box-shadow: none;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+  }
 }

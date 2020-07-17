@@ -274,17 +274,6 @@ pre.dark[class*='language-'] {
   white-space: nowrap;
 }
 
-@media (max-width: 600px) {
-  .feature div {
-    flex-basis: auto;
-    padding-left: 0;
-  }
-
-  .feature h4 {
-    font-size: 0.75rem;
-  }
-}
-
 .explanation {
   font-size: 1rem;
   width: 35rem;
@@ -341,8 +330,7 @@ blockquote {
 
 .container {
   min-height: 100vh;
-  max-width: calc(960px + 0%);
-  margin: 2rem auto;
+  margin: 2rem 1.6rem;
   padding: 2rem 0;
   text-align: center;
   flex-grow: 1;
@@ -425,9 +413,9 @@ code {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
+  width: 25px;
+  height: 20px;
+  right: 18px;
   top: 18px;
 }
 
@@ -499,17 +487,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 600px) {
-  .explanation {
-    padding: 0 1rem 4rem;
-  }
-
-  h2 {
-    font-size: 0.95rem;
-    letter-spacing: 0;
-  }
-}
-
 .dotted {
   border-bottom: 1px dashed black;
 }
@@ -530,4 +507,27 @@ footer span:nth-child(3) {
 
 footer span:nth-child(3) a {
   color: inherit;
+}
+
+/*タブレット*/
+@media screen and (min-width: 560px) {
+}
+/* pc */
+@media screen and (min-width: 960px) {
+  .container {
+    min-height: 100vh;
+    max-width: calc(960px + 0%);
+    margin: 2rem auto;
+    padding: 2rem 0;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 18px;
+  }
 }

@@ -21,6 +21,9 @@ export default () => (
         </div>
       </div>
       <hr />
+      <p>
+        Powerd by <a href="https://github.com/ijjk/notion-blog">Notion-blog</a>
+      </p>
       <p>&copy; Canned Bananas 2020 / 🧍🏻‍♀ + 🌸 + 👑 = 🍌 </p>
     </footer>
   </>
