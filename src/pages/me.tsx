@@ -14,17 +14,18 @@ const sections = [
   {
     title: 'Favorites',
     details: 'ラジオとかお笑いが好きです。',
-    link: 'https://www.notion.so/8953623c338544e99ba10d9b2e1302c6',
+    link: '/blog/favorites',
   },
   {
     title: 'Music',
     details:
       'HipHopが好きです。特に日本語ラップが好きです。17歳で聞いているということは一生聞くかもしれません。',
+    link: '/blog/music',
   },
   {
     title: 'Food',
     details: 'ネバネバしたものとか、コリコリしているものが基本的に好きです。',
-    link: 'https://www.notion.so/49ace3283cb1499b9e00f37ff5d0d334',
+    link: '/blog/food',
   },
   {
     title: 'Essay',
@@ -39,7 +40,7 @@ export default () => (
     <Header titlePre="Me" />
 
     <div className="container">
-      <h1>立花 冠wiki</h1>
+      <h1>立花 冠 wiki</h1>
       <div className={styles.meWrapper}>
         {sections.map(({ title, details, link }) => {
           return <Section title={title} details={details} link={link} />

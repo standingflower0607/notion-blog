@@ -13,12 +13,42 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Me', page: '/me' },
 ]
 
-const ogImageUrl = '/images/amekomi.jpg'
+const ogImageUrl = '/images/favicon.jpg'
 const profileImage = '/images/for_insta_compressed.jpg'
+if (typeof window !== 'undefined') {
+  window.addEventListener('scroll', function() {
+    //スクロール量を取得
+    let scroll = window.scrollY
+    // ウィンドウの高さを取得
+    let windowHeight = window.innerHeight
+    // ページの高さを取得(ページによって異なる、いわばbodyの高さ)
+    let pageHeight = document.body.clientHeight
+    // 元々のwindowHeightとスクロール量を足すことでページ全体の高さと等しくなる
+    // (window.scrollY + window.innerHeight) / document.body.clientHeight
+    let x = 16 * (scroll / (pageHeight - windowHeight))
+    let a = 1 / 4
+    let aG = 1 / 2
+    let R = a * Math.pow(x - 8, 2) + 239
+    let B = -a * Math.pow(x - 8, 2) + 255
+    let G = 0
+
+    if (x <= 4) {
+      G = -aG * Math.pow(x - 4, 2) + 255
+    } else if (x <= 8) {
+      G = 255
+    } else if (x <= 12) {
+      G = -aG * Math.pow(x - 4, 2) + 255
+    } else {
+      G = 239
+    }
+    if (typeof document !== 'undefined') {
+      document.body.style.backgroundColor = `rgb(${R},${B}, ${G} )`
+    }
+  })
+}
 
 export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()
-
   return (
     <header>
       <Menu right>
@@ -26,7 +56,7 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
           <img src={profileImage} alt="わい" />
           <div>
             <p>たちばな　かん</p>
-            <div>
+            <div className="iconWrapper">
               {contacts.map(({ icon, link, alt }) => {
                 return (
                   <ExtLink key={link} href={link} aria-label={alt}>
@@ -37,14 +67,10 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
             </div>
           </div>
         </div>
-        {navItems.map(({ label, page, link }) => (
-          <div key={label}>
-            {page ? (
-              <Link href={page}>{label}</Link>
-            ) : (
-              <ExtLink href={link}>{label}</ExtLink>
-            )}
-          </div>
+        {navItems.map(({ label, page }) => (
+          <Link href={page} key={label}>
+            <a>{label}</a>
+          </Link>
         ))}
       </Menu>
       <div className={styles.header}>
@@ -68,7 +94,7 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
           ></link>
         </Head>
 
-        <div className={styles.icon}>
+        <div className={styles.logo}>
           <a href="/blog">バナナの缶詰</a>
         </div>
 

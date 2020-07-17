@@ -14,9 +14,11 @@ export default () => (
         <div className={styles.footerLeft}>
           <div className={styles.footerCategory}>
             <h3>Cagegory</h3>
+            <p>ちょいお待ち</p>
           </div>
           <div className={styles.footerLink}>
             <h3>Link</h3>
+            <p>ちょいお待ち</p>
           </div>
         </div>
       </div>

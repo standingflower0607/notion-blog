@@ -73,7 +73,7 @@ export default ({ posts = [], preview }) => {
       <div className="container">
         <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
           <h1>My Blog</h1>
-          <p className="utsukushi-font">
+          <p>
             SNSをやらない代わりに。第三者がいない1対多コミュニーケーション。
           </p>
           {posts.length === 0 && (
