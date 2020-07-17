@@ -65,7 +65,7 @@ pre[class*='language-'] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  font-size: 0.95em;
+  font-size: 1.6rem;
   line-height: 1.4em;
   tab-size: 4;
   hyphens: none;
@@ -85,7 +85,7 @@ pre[class*='language-'] {
 }
 .token.punctuation,
 .token.operator {
-  color: #000;
+  color: white;
 }
 .token.url,
 .token.symbol,
@@ -294,6 +294,7 @@ blockquote {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  text-align: center;
 }
 
 link {
@@ -332,7 +333,7 @@ pre :global(code) {
 }
 
 code {
-  font-size: 0.8rem;
+  color: #eb5757;
   background: #f1f1f1;
   padding: 0.2rem;
   border-radius: var(--radius);

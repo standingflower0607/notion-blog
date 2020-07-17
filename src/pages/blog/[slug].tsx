@@ -347,7 +347,9 @@ const RenderPost = ({ post, redirect, preview }) => {
 
                 const isImage = type === 'image'
                 const Comp = isImage ? 'img' : 'video'
-                const useWrapper = block_aspect_ratio && !block_height
+                // const useWrapper = block_aspect_ratio && !block_height
+                // gifがassetWrapperに包まれないので,条件を変える
+                const useWrapper = block_aspect_ratio
                 const childStyle: CSSProperties = useWrapper
                   ? {
                       width: '100%',
@@ -493,6 +495,8 @@ const RenderPost = ({ post, redirect, preview }) => {
                 const { link, title, description } = properties
                 const { format = {} } = value
                 renderBookmark({ link, title, description, format })
+                break
+              case 'table_of_contents':
                 break
               default:
                 if (

@@ -9,8 +9,8 @@ import sharedStyles from '../styles/shared.module.css'
 export default () => (
   <>
     <Header titlePre="About" />
-    <div className={sharedStyles.index}>
-      <div className="container">
+    <div className="container">
+      <div className={sharedStyles.index}>
         <h1>About</h1>
         <img
           className={sharedStyles.img}

@@ -15,24 +15,37 @@ const navItems: { label: string; page?: string; link?: string }[] = [
 
 const ogImageUrl = '/images/favicon.jpg'
 const profileImage = '/images/for_insta_compressed.jpg'
+if (typeof window !== 'undefined') {
+  window.addEventListener('scroll', function() {
+    //スクロール量を取得
+    let scroll = window.scrollY
+    // ウィンドウの高さを取得
+    let windowHeight = window.innerHeight
+    // ページの高さを取得(ページによって異なる、いわばbodyの高さ)
+    let pageHeight = document.body.clientHeight
+    // 元々のwindowHeightとスクロール量を足すことでページ全体の高さと等しくなる
+    // (window.scrollY + window.innerHeight) / document.body.clientHeight
+    let x = 16 * (scroll / (pageHeight - windowHeight))
+    let a = 1 / 4
+    let aG = 1 / 2
+    let R = a * Math.pow(x - 8, 2) + 239
+    let B = -a * Math.pow(x - 8, 2) + 255
+    let G = 0
 
-window.addEventListener('scroll', function() {
-  //スクロールの高さを取得
-  let scroll = window.pageYOffset
-  if (typeof document !== 'undefined') {
-    if (scroll > 4000) {
-      document.body.style.backgroundColor = '#FFC400'
-    } else if (scroll > 3000) {
-      document.body.style.backgroundColor = '#43A047'
-    } else if (scroll > 2000) {
-      document.body.style.backgroundColor = '#FF6F00'
-    } else if (scroll > 1000) {
-      document.body.style.backgroundColor = '#0091EA'
+    if (x <= 4) {
+      G = -aG * Math.pow(x - 4, 2) + 255
+    } else if (x <= 8) {
+      G = 255
+    } else if (x <= 12) {
+      G = -aG * Math.pow(x - 4, 2) + 255
     } else {
-      document.body.style.backgroundColor = '#FF4081'
+      G = 239
     }
-  }
-})
+    if (typeof document !== 'undefined') {
+      document.body.style.backgroundColor = `rgb(${R},${B}, ${G} )`
+    }
+  })
+}
 
 export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()
