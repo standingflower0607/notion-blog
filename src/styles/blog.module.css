@@ -277,7 +277,7 @@
   padding: 0;
 }
 
-.blogCard {
+.blogCard:nth-child(1) {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -295,7 +295,7 @@
   /*transition: 0.1s;*/
 }
 
-.postPreviewCover {
+.blogCard:nth-child(1) .postPreviewCover {
   /* 黄金比 */
   width: 100%;
   max-height: 150px;
@@ -304,6 +304,18 @@
   border-radius: 0.5rem;
 }
 
+.blogCard {
+  width: 49%;
+  margin-right: 1%;
+}
+.blogCard .postPreviewCover {
+  width: 99%;
+  max-height: 200px;
+  object-fit: cover;
+  box-shadow: none;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
 .blogCard:hover {
   transform: scale(1.01);
   z-index: 1;
@@ -347,6 +359,18 @@
   /* 小さい方が大きい 最後が高さ)*/
   background: linear-gradient(transparent 45%, var(--accents-2) 15%);
 }
+
+.shareWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  font-size: 3rem;
+}
+.shareWrapper a {
+  margin: 0 3rem;
+}
+
 /*　スマホ縦 */
 
 /*タブレット*/
@@ -378,8 +402,7 @@
     flex-direction: column;
     align-items: center;
     width: 32%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 2rem 0;
     box-sizing: border-box;
     padding: 0.3rem;
 

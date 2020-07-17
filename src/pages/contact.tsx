@@ -23,7 +23,7 @@ export default () => (
 
         <div className={contactStyles.name}>Kan Tachibana</div>
 
-        <div className={contactStyles.links}>
+        <div className="iconWrapper">
           {contacts.map(({ icon, link, alt }) => {
             return (
               <ExtLink key={link} href={link} aria-label={alt}>

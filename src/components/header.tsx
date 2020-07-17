@@ -13,12 +13,29 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Me', page: '/me' },
 ]
 
-const ogImageUrl = '/images/amekomi.jpg'
+const ogImageUrl = '/images/favicon.jpg'
 const profileImage = '/images/for_insta_compressed.jpg'
+
+window.addEventListener('scroll', function() {
+  //スクロールの高さを取得
+  let scroll = window.pageYOffset
+  if (typeof document !== 'undefined') {
+    if (scroll > 4000) {
+      document.body.style.backgroundColor = '#FFC400'
+    } else if (scroll > 3000) {
+      document.body.style.backgroundColor = '#43A047'
+    } else if (scroll > 2000) {
+      document.body.style.backgroundColor = '#FF6F00'
+    } else if (scroll > 1000) {
+      document.body.style.backgroundColor = '#0091EA'
+    } else {
+      document.body.style.backgroundColor = '#FF4081'
+    }
+  }
+})
 
 export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()
-
   return (
     <header>
       <Menu right>
@@ -26,7 +43,7 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
           <img src={profileImage} alt="わい" />
           <div>
             <p>たちばな　かん</p>
-            <div>
+            <div className="iconWrapper">
               {contacts.map(({ icon, link, alt }) => {
                 return (
                   <ExtLink key={link} href={link} aria-label={alt}>
@@ -37,14 +54,10 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
             </div>
           </div>
         </div>
-        {navItems.map(({ label, page, link }) => (
-          <div key={label}>
-            {page ? (
-              <Link href={page}>{label}</Link>
-            ) : (
-              <ExtLink href={link}>{label}</ExtLink>
-            )}
-          </div>
+        {navItems.map(({ label, page }) => (
+          <Link href={page} key={label}>
+            <a>{label}</a>
+          </Link>
         ))}
       </Menu>
       <div className={styles.header}>
@@ -68,7 +81,7 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
           ></link>
         </Head>
 
-        <div className={styles.icon}>
+        <div className={styles.logo}>
           <a href="/blog">バナナの缶詰</a>
         </div>
 

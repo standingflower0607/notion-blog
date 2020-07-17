@@ -1,45 +1,3 @@
-@font-face {
-  font-family: 'hanko-font';
-  src: url('../../assets/fonts/HANKO___.TTF');
-}
-
-@font-face {
-  font-family: 'dinosaur-font';
-  src: url("../../assets/fonts/KR Nicky's Dinos.ttf");
-}
-
-@font-face {
-  /** 漢字少し **/
-  font-family: 'bananaslip-font';
-  src: url('../../assets/fonts/bananaslip.otf');
-}
-
-@font-face {
-  font-family: 'coporate-font';
-  src: url('../../assets/fonts/logotypejp_mp_m_1.1.ttf');
-}
-
-@font-face {
-  font-family: 'mamelon-font';
-  src: url('../../assets/fonts/Mamelon.otf');
-}
-
-@font-face {
-  font-family: 'utsukushi-font';
-  src: url('../../assets/fonts/UtsukushiFONT.otf');
-}
-@font-face {
-  font-family: 'heiseilast-font';
-  src: url('../../assets/fonts/平成最後のフォント.otf');
-}
-@font-face {
-  font-family: 'honokamarugo-font';
-  src: url('../../assets/fonts/font_1_honokamarugo_1.1.ttf');
-}
-@font-face {
-  font-family: 'hannari-font';
-  src: url('../../assets/fonts/Hannari.otf');
-}
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
@@ -86,10 +44,9 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Segoe UI,
-    Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
-    メイリオ, Meiryo, sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, Segoe UI, Hiragino Kaku Gothic ProN, Hiragino Sans,
+    'ヒラギノ角ゴ ProN W3', Arial, メイリオ, Meiryo;
 
   background-image: radial-gradient(#ddd 1px, transparent 1px),
     radial-gradient(#ddd 1px, transparent 1px);
@@ -330,26 +287,13 @@ blockquote {
 
 .container {
   min-height: 100vh;
-  margin: 2rem 1.6rem;
+  margin: 0rem 1.6rem;
   padding: 2rem 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
-}
-
-/** fonts **/
-.bananaslip-font {
-  font-family: banaaslip-font;
-}
-.dinosaur-font {
-  font-family: dinosaur-font;
-  color: rgb(127, 255, 148);
-}
-
-.hanko-font {
-  font-family: hanko-font;
-}
-.utsukushi-font {
-  font-family: utsukushi-font;
 }
 
 link {
@@ -452,7 +396,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .bm-menu {
   background: var(--bg);
-  padding: 2.5em 1em 0;
+  padding: 2.5em 1em 2.5rem;
   font-size: 3rem;
 }
 
@@ -490,7 +434,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .dotted {
   border-bottom: 1px dashed black;
 }
-
+.iconWrapper {
+  font-size: 3rem;
+  margin: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.iconWrapper i {
+  display: inline-block;
+  transition: opacity 200ms ease;
+}
+.iconWrapper i:hover {
+  opacity: 0.6;
+}
 footer {
   padding: 2em 0;
   text-align: center;
@@ -517,10 +473,13 @@ footer span:nth-child(3) a {
   .container {
     min-height: 100vh;
     max-width: calc(960px + 0%);
-    margin: 2rem auto;
     padding: 2rem 0;
-    text-align: center;
+    margin: 0 auto;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .bm-burger-button {

@@ -40,15 +40,15 @@
   font-weight: 700;
 }
 
-.icon {
+.logo {
   margin-left: 1rem;
-  font-family: mamelon-font;
+  font-family: 'Mamelon';
   font-size: 3.5rem;
   color: #4a3221;
   background: linear-gradient(transparent 45%, var(--accents-1) 80%);
 }
 
-.icon a {
+.logo a {
   color: var(--dark-brown);
 }
 .sideProfile {
@@ -58,6 +58,7 @@
   width: 100%;
   border-radius: 50%;
 }
+
 /*タブレット*/
 @media screen and (min-width: 560px) {
 }
