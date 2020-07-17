@@ -3,7 +3,7 @@ import Head from 'next/head'
 import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
-import { stack as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import contacts from '../../public/contacts'
 
 const navItems: { label: string; page?: string; link?: string }[] = [

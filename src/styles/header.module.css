@@ -58,8 +58,9 @@
   width: 100%;
   border-radius: 50%;
 }
-@media (max-width: 768px) {
-  .header {
-    padding: 0.5em 0 2em;
-  }
+/*タブレット*/
+@media screen and (min-width: 560px) {
+}
+/* pc */
+@media screen and (min-width: 960px) {
 }
