@@ -9,7 +9,7 @@
 .blogDetails {
   color: white;
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   justify-content: center;
   white-space: nowrap;
 }
@@ -68,10 +68,8 @@
   text-align: center;
 }
 .postContent {
-  flex-grow: 1;
   margin: 0;
   border-radius: 0 0 1rem 1rem;
-  background-color: white;
   padding: 0.5rem 0.5rem;
 }
 .title {
@@ -85,16 +83,18 @@
   line-height: 1.4;
   padding-bottom: 0.3rem;
   color: rgb(97, 97, 97);
+  display: none;
 }
 
 .post :global(h2),
 .post :global(h3) {
   margin: 3rem 0 1.5rem 0;
 }
-
+/*
 .post :global(video),
 .post :global(img) {
 }
+*/
 .post :global(.asset-wrapper) {
   margin: 4rem auto;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
@@ -138,7 +138,7 @@
 
 .post p {
   font-size: 1.6rem;
-  line-height: 3.2rem;
+  line-height: 3rem;
 }
 .post ul,
 .post ol {
@@ -280,39 +280,42 @@
 }
 
 .blogCard:nth-child(1) {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  width: calc(100% - 20px);
+  margin: 1rem;
   box-sizing: border-box;
   padding: 0.3rem;
-
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.25s ease;
   animation: populate 0.5s ease-out normal backwards;
-
+  flex-direction: column;
   /*transition: 0.1s;*/
 }
 
 .blogCard:nth-child(1) .postPreviewCover {
   /* 黄金比 */
   width: 100%;
-  max-height: 150px;
+  height: auto;
   box-shadow: none;
   margin: 0.5rem;
   border-radius: 0.5rem;
 }
 
 .blogCard {
-  width: 49%;
-  margin-right: 1%;
+  display: inline-block;
+  width: calc(100% - 20px);
+  background-color: white;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: left;
+  justify-content: space-between;
 }
-.blogCard .postPreviewCover {
-  width: 99%;
-  max-height: 200px;
+@media screen and (max-width: 601px) {
+}
+
+.postPreviewCover {
+  width: 30%;
+  height: auto;
   object-fit: cover;
   box-shadow: none;
   margin: 0.5rem;
@@ -355,9 +358,13 @@
 .articleHeaderContents {
   z-index: 1;
 }
+.pageTitleWrapper {
+  margin: 0 1.6rem;
+}
 .pageTitle {
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  display: inline;
   /* 小さい方が大きい 最後が高さ)*/
   background: linear-gradient(transparent 45%, var(--accents-2) 15%);
 }
@@ -376,33 +383,24 @@
 /*　スマホ縦 */
 
 /*タブレット*/
-@media screen and (min-width: 560px) {
-}
 /* pc */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 601px) {
   .post {
-    color: var(--dark-brown);
     font-size: 1.6rem;
     max-width: calc(960px);
     margin: 3rem auto;
     padding: 5rem 16rem;
-    background-color: white;
     border-radius: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
   .pageTitle {
-    color: white;
     font-size: 2.5rem;
     /* 小さい方が大きい 最後が高さ)*/
     background: linear-gradient(transparent 45%, var(--accents-2) 15%);
   }
 
   .blogCard {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 32%;
     margin: 2rem 0;
     box-sizing: border-box;
@@ -411,6 +409,11 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.25s ease;
     animation: populate 0.5s ease-out normal backwards;
+
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: unset;
 
     /*transition: 0.1s;*/
   }
@@ -428,7 +431,7 @@
     margin-right: 2%;
   }
 
-  .blogCard:nth-child(3n + 5) .postPreviewCover {
+  .blogCard:nth-of-type(3n + 5) .postPreviewCover {
     /* 黄金比 */
     width: 100%;
     max-height: 150px;
