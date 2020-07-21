@@ -467,10 +467,8 @@ footer span:nth-child(3) a {
 }
 
 /*タブレット*/
-@media screen and (min-width: 560px) {
-}
 /* pc */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 601px) {
   .container {
     min-height: 100vh;
     max-width: calc(960px + 0%);

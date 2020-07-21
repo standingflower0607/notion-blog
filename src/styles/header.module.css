@@ -60,8 +60,6 @@
 }
 
 /*タブレット*/
-@media screen and (min-width: 560px) {
-}
 /* pc */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 601px) {
 }

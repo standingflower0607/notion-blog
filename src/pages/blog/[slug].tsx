@@ -183,7 +183,9 @@ const RenderPost = ({ post, redirect, preview }) => {
         ) : null}
         */}
         <div className={blogStyles.articleHeaderContents}>
-          <h1 className={blogStyles.pageTitle}>{post.Page || ''}</h1>
+          <div className={blogStyles.pageTitleWrapper}>
+            <h1 className={blogStyles.pageTitle}>{post.Page || ''}</h1>
+          </div>
           <div className={blogStyles.blogDetails}>
             {
               //{post.Authors.length > 0 && (<div className="authors">🤔{post.Authors.join(' ')}</div>)}
@@ -497,6 +499,31 @@ const RenderPost = ({ post, redirect, preview }) => {
                 renderBookmark({ link, title, description, format })
                 break
               case 'table_of_contents':
+                // headerをリストに入れて、埋めてやればいい
+                break
+              case 'miro':
+                let miroUrl = properties.source[0][0]
+                const b = miroUrl.indexOf('b')
+                const d = miroUrl.indexOf('d')
+                const formerUrl = miroUrl.substring(0, b)
+                const latterUrl = miroUrl.substring(d + 1, miroUrl.length)
+                const embedUrl = `${formerUrl}embed${latterUrl}?&pres=1`
+                const miroStyle: CSSProperties = {
+                  width: '100%',
+                  height: '300px',
+                  border: 'none',
+                }
+                console.log(embedUrl)
+                toRender.push(
+                  <div>
+                    <iframe
+                      src={embedUrl}
+                      style={miroStyle}
+                      frameBorder="0"
+                    ></iframe>
+                  </div>
+                )
+                console.log(properties)
                 break
               default:
                 if (
@@ -504,6 +531,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                   !listTypes.has(type)
                 ) {
                   console.log('unknown type', type)
+                  // console.log(block);
                 }
                 break
             }
