@@ -45,7 +45,6 @@
   font-family: 'Mamelon';
   font-size: 3.5rem;
   color: #4a3221;
-  background: linear-gradient(transparent 45%, var(--accents-1) 80%);
 }
 
 .logo a {

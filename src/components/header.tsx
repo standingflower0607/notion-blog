@@ -15,6 +15,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
 
 const ogImageUrl = '/images/favicon.jpg'
 const profileImage = '/images/for_insta_compressed.jpg'
+/*
 if (typeof window !== 'undefined') {
   window.addEventListener('scroll', function() {
     //スクロール量を取得
@@ -46,7 +47,7 @@ if (typeof window !== 'undefined') {
     }
   })
 }
-
+*/
 export default ({ titlePre = '', ogImageReplace = undefined }) => {
   const { pathname } = useRouter()
   return (
