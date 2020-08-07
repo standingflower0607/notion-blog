@@ -538,16 +538,36 @@ const RenderPost = ({ post, redirect, preview }) => {
             return toRender
           })}
         </div>
-        <p>共有したければ、すりゃいいんじゃない</p>
-        {/** 
+        <a
+          className={blogStyles.ofuseButton}
+          href="https://ofuse.me/users/banakan"
+        >
+          コメントと共に投げ銭する(OFUSE)
+        </a>
 
+        {
           <div className={blogStyles.shareWrapper}>
-            <a href={`https://twitter.com/intent/tweet?url=${location.href}&text=バナナの缶詰 | ${post.Page}`}><i className="fab fa-twitter" /></a>
-            <a href={`https://www.facebook.com/sharer/sharer.php?u=${location.href}`}><i className="fab fa-facebook" /></a>
-            <a href={`http://getpocket.com/edit?url=${location.href}&title=バナナの缶詰 | ${post.Page}`}><i className="fab fa-get-pocket" /></a>
-            <a href="http://fetchrss.com/rss/5f1151368a93f875168b45675f1151128a93f851128b4567.xml"><i className="fas fa-rss-square" /></a>
+            <a
+              href={`https://twitter.com/intent/tweet?url=${location.href}&text=バナナの缶詰 | ${post.Page}`}
+            >
+              <i className="fab fa-twitter" />
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${location.href}`}
+            >
+              <i className="fab fa-facebook" />
+            </a>
+            <a
+              href={`http://getpocket.com/edit?url=${location.href}&title=バナナの缶詰 | ${post.Page}`}
+            >
+              <i className="fab fa-get-pocket" />
+            </a>
+            <a href="http://fetchrss.com/rss/5f1151368a93f875168b45675f1151128a93f851128b4567.xml">
+              <i className="fas fa-rss-square" />
+            </a>
           </div>
-          */}
+        }
+        <p>共有したけりゃ、すりゃいいんじゃない</p>
       </div>
     </>
   )
