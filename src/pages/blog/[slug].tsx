@@ -545,20 +545,20 @@ const RenderPost = ({ post, redirect, preview }) => {
           コメントと共に投げ銭する(OFUSE)
         </a>
 
-        {
+        {typeof window !== 'undefined' ? (
           <div className={blogStyles.shareWrapper}>
             <a
-              href={`https://twitter.com/intent/tweet?url=${location.href}&text=バナナの缶詰 | ${post.Page}`}
+              href={`https://twitter.com/intent/tweet?url=${window.location.href}&text=バナナの缶詰 | ${post.Page}`}
             >
               <i className="fab fa-twitter" />
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${location.href}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
             >
               <i className="fab fa-facebook" />
             </a>
             <a
-              href={`http://getpocket.com/edit?url=${location.href}&title=バナナの缶詰 | ${post.Page}`}
+              href={`http://getpocket.com/edit?url=${window.location.href}&title=バナナの缶詰 | ${post.Page}`}
             >
               <i className="fab fa-get-pocket" />
             </a>
@@ -566,7 +566,7 @@ const RenderPost = ({ post, redirect, preview }) => {
               <i className="fas fa-rss-square" />
             </a>
           </div>
-        }
+        ) : null}
         <p>共有したけりゃ、すりゃいいんじゃない</p>
       </div>
     </>
