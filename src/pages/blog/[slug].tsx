@@ -541,6 +541,7 @@ const RenderPost = ({ post, redirect, preview }) => {
         <a
           className={blogStyles.ofuseButton}
           href="https://ofuse.me/users/banakan"
+          target="_blank"
         >
           コメントと共に投げ銭する(OFUSE)
         </a>
