@@ -56,7 +56,7 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
         <div className={styles.sideProfile}>
           <img src={profileImage} alt="わい" />
           <div>
-            <p>たちばな　かん</p>
+            <p>城華　暖</p>
             <div className="iconWrapper">
               {contacts.map(({ icon, link, alt }) => {
                 return (
@@ -68,21 +68,21 @@ export default ({ titlePre = '', ogImageReplace = undefined }) => {
             </div>
           </div>
         </div>
-        {navItems.map(({ label, page }) => (
+        {/*navItems.map(({ label, page }) => (
           <Link href={page} key={label}>
             <a>{label}</a>
           </Link>
-        ))}
+        ))*/}
       </Menu>
       <div className={styles.header}>
         <Head>
           <title>
             {titlePre ? `${titlePre} |` : ''} バナナの缶詰 | Canned
-            Bananas　立花 冠/Kan Tachibana
+            Bananas
           </title>
           <meta
             name="description"
-            content="立花冠の個人サイト。SNSは基本的にやっておりませんので、私を知りたければこちらを参照していただけると幸いです。"
+            content="城華 暖のサイト。"
           />
           <meta name="og:title" content="バナナの缶詰 || Canned Bananas" />
           <meta property="og:image" content={ogImageReplace || ogImageUrl} />
