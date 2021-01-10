@@ -21,7 +21,7 @@ export default () => (
           <img src="/images/for_insta_compressed.jpg" alt="" />
         </div>
 
-        <div className={contactStyles.name}>Kan Tachibana</div>
+        <div className={contactStyles.name}>Dan Tachibana</div>
 
         <div className="iconWrapper">
           {contacts.map(({ icon, link, alt }) => {
