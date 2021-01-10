@@ -73,7 +73,6 @@ export default ({ posts = [], preview }) => {
       <div className="container">
         <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
           <h1>My Blog</h1>
-          <p>申し訳ありませんが、すべてが書き途中でございます</p>
           {posts.length === 0 && (
             <p className={blogStyles.noPosts}>There are no posts yet</p>
           )}
