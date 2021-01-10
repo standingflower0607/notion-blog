@@ -40,7 +40,7 @@ export default () => (
     <Header titlePre="Me" />
 
     <div className="container">
-      <h1>立花 冠 wiki</h1>
+      <h1>wiki</h1>
       <div className={styles.meWrapper}>
         {sections.map(({ title, details, link }) => {
           return <Section title={title} details={details} link={link} />
